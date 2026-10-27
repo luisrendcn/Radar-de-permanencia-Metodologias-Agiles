@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider, useQueryClient } from '@tanstack/reac
 import { Link, Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 import {
   Activity, AlertCircle, ArrowDownRight, ArrowRight, ArrowUpRight, BarChart3,
-  Check, CheckCircle2, CircleHelp, Database, FileSpreadsheet, Filter, Gauge,
+  Check, CheckCircle2, CircleHelp, Database, FileSpreadsheet, Filter, Gauge, ClipboardList,
   Layers3, Menu, ShieldCheck, Sparkles, Target, TrendingDown, Users,
 } from 'lucide-react';
 import {
@@ -38,6 +38,7 @@ function Shell({ children, synthetic }: { children: ReactNode; synthetic: boolea
   const [mobileOpen, setMobileOpen] = useState(false);
   const links = [
     { href: '/', label: 'Resumen', icon: BarChart3 },
+    { href: '/proyecto', label: 'Seguimiento ágil', icon: ClipboardList },
     { href: '/rotacion', label: 'Rotación', icon: TrendingDown },
     { href: '/diagnostico', label: 'Diagnóstico', icon: Activity },
     { href: '/candidato', label: 'Evaluación de apoyo', icon: Users },
@@ -348,6 +349,25 @@ function ModelPage() {
   </div>;
 }
 
+type AgileState = { name: string; days: number; points: number; completed: string; goal: number; delivered: number; defects: number; wip: number; leadHours: number; deploys: number; recoveryHours: number; changeFail: number; rework: number; objective: string; deliveredText: string; pendingText: string; lessons: string; nextSteps: string };
+const agileDefaults: AgileState = { name: 'Sprint de ejemplo', days: 10, points: 34, completed: '3, 2, 4, 3, 2, 4, 1, 3, 2, 3', goal: 80, delivered: 27, defects: 2, wip: 5, leadHours: 24, deploys: 4, recoveryHours: 3, changeFail: 10, rework: 15, objective: 'Describir el objetivo del sprint', deliveredText: 'Registrar los entregables completados', pendingText: 'Registrar lo que quedó pendiente', lessons: 'Anotar aprendizajes del equipo', nextSteps: 'Definir acciones, responsables y fechas' };
+function AgileProjectPage() {
+  const [s, setS] = useState<AgileState>(() => { try { const v = localStorage.getItem('radar-agile-project-v1'); return v ? { ...agileDefaults, ...JSON.parse(v) } : agileDefaults; } catch { return agileDefaults; } });
+  const update = (key: keyof AgileState, value: string) => { const next = { ...s, [key]: ['name','completed','objective','deliveredText','pendingText','lessons','nextSteps'].includes(key) ? value : Number(value) }; setS(next); try { localStorage.setItem('radar-agile-project-v1', JSON.stringify(next)); } catch { /* storage may be unavailable */ } };
+  const completed = s.completed.split(',').map(x => Math.max(0, Number(x.trim()) || 0)).slice(0, Math.max(1, s.days));
+  const chart = Array.from({ length: Math.max(1, s.days) + 1 }, (_, day) => { const done = completed.slice(0, day).reduce((a,b) => a+b, 0); return { day: `D${day}`, ideal: Math.max(0, s.points - s.points * day / Math.max(1,s.days)), actual: Math.max(0, s.points - done) }; });
+  const remaining = chart.at(-1)?.actual ?? s.points;
+  const saveCloseout = () => { const body = `# Documento de cierre · ${s.name}\n\nFecha: ${new Date().toLocaleDateString('es-CO')}\n\n## Objetivo\n${s.objective}\n\n## Entregables completados\n${s.deliveredText}\n\n## Pendientes\n${s.pendingText}\n\n## Burndown\nPuntos planificados: ${s.points}. Puntos restantes estimados: ${remaining}.\n\n## Indicadores de rendimiento\nCumplimiento del objetivo: ${s.goal}%. Puntos entregados: ${s.delivered}. Defectos: ${s.defects}. Trabajo en curso: ${s.wip}.\n\n## Métricas DORA\nFrecuencia de despliegue: ${s.deploys}/semana. Tiempo de entrega de cambios: ${s.leadHours} horas. Recuperación de despliegue fallido: ${s.recoveryHours} horas. Tasa de fallos de cambio: ${s.changeFail}%. Tasa de retrabajo de despliegue: ${s.rework}%.\n\n## Aprendizajes\n${s.lessons}\n\n## Próximas acciones\n${s.nextSteps}\n`; const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([body], { type: 'text/markdown;charset=utf-8' })); a.download = `cierre-${s.name.trim().replace(/[^a-z0-9]+/gi,'-').toLowerCase() || 'proyecto'}.md`; a.click(); URL.revokeObjectURL(a.href); };
+  const field = (label: string, key: keyof AgileState, type = 'number', unit?: string) => <label className="agile-field"><span>{label}{unit && <small>{unit}</small>}</span><input type={type} value={s[key]} min={type === 'number' ? 0 : undefined} onChange={e => update(key,e.target.value)}/></label>;
+  return <div className="content"><PageTitle eyebrow="PROYECTO · SEGUIMIENTO ÁGIL" title="Avance y entrega, a la vista." subtitle="Burndown, métricas DORA e indicadores editables para orientar la conversación del equipo." action={<Button onClick={saveCloseout}>Descargar cierre</Button>}/>
+    <div className="agile-notice"><ClipboardList size={17}/> Ejemplo inicial editable. Los cambios se guardan solo en este navegador y no se comparten entre lectores del QR.</div>
+    <div className="agile-layout"><Panel title="Burndown del sprint" subtitle="Puntos restantes reales frente al ritmo ideal."><div className="agile-controls">{field('Nombre del sprint','name','text')}{field('Duración','days','number','días')}{field('Puntos planificados','points')}</div><label className="agile-field agile-wide"><span>Puntos completados por día <small>separados por comas</small></span><input value={s.completed} onChange={e=>update('completed',e.target.value)}/></label><div className="burndown-chart"><svg viewBox="0 0 640 240" role="img" aria-label="Gráfico de puntos pendientes por día"><line x1="45" y1="20" x2="45" y2="200"/><line x1="45" y1="200" x2="620" y2="200"/>{chart.map((p,i)=><g key={p.day}><text x={45+i*575/Math.max(1,chart.length-1)} y="222">{p.day}</text>{i>0&&<><line className="ideal-line" x1={45+(i-1)*575/Math.max(1,chart.length-1)} y1={200-(chart[i-1].ideal/Math.max(1,s.points))*170} x2={45+i*575/Math.max(1,chart.length-1)} y2={200-(p.ideal/Math.max(1,s.points))*170}/><line className="actual-line" x1={45+(i-1)*575/Math.max(1,chart.length-1)} y1={200-(chart[i-1].actual/Math.max(1,s.points))*170} x2={45+i*575/Math.max(1,chart.length-1)} y2={200-(p.actual/Math.max(1,s.points))*170}/></>}</g>)}</svg><div className="chart-legend"><span><i className="ideal-dot"/>Ideal</span><span><i className="actual-dot"/>Real</span><b>{remaining} puntos restantes</b></div></div></Panel>
+    <Panel title="Indicadores de rendimiento" subtitle="Señales de flujo y entrega a nivel de equipo."><div className="agile-fields">{field('Cumplimiento del objetivo','goal','number','%')}{field('Puntos entregados','delivered')}{field('Defectos encontrados','defects')}{field('Trabajo en curso','wip')}</div><p className="agile-hint">Revisar en conjunto con calidad y contexto; no usar para comparar ni calificar personas.</p></Panel></div>
+    <Panel title="Métricas DORA" subtitle="Cinco medidas para observar la entrega de software."><div className="agile-fields">{field('Frecuencia de despliegue','deploys','number','por semana')}{field('Tiempo de entrega de cambios','leadHours','number','horas')}{field('Recuperación de despliegue fallido','recoveryHours','number','horas')}{field('Tasa de fallos de cambio','changeFail','number','%')}{field('Tasa de retrabajo de despliegue','rework','number','%')}</div><p className="agile-hint">Registra periodos comparables. DORA define las métricas de entrega y confiabilidad del software.</p></Panel>
+    <Panel title="Documento de cierre" subtitle="Completa los campos y descarga un archivo Markdown para compartir o archivar."><div className="agile-fields">{field('Objetivo del proyecto','objective','text')}{field('Entregables completados','deliveredText','text')}{field('Pendientes','pendingText','text')}{field('Aprendizajes','lessons','text')}{field('Próximas acciones','nextSteps','text')}</div><div className="agile-export"><span>El cierre incluye resumen, Burndown, indicadores y métricas DORA.</span><Button kind="secondary" onClick={saveCloseout}>Descargar documento de cierre</Button></div></Panel>
+  </div>;
+}
+
 function Router() {
   const [location] = useLocation();
   const [filters, setFilters] = useState<FilterState>(blankFilters);
@@ -356,6 +376,7 @@ function Router() {
   const synthetic=status.data?.syntheticData ?? health.data?.syntheticData ?? false;
   return <ErrorBoundary resetKey={location}><Shell synthetic={synthetic}><Switch>
     <Route path="/" component={OverviewPage}/>
+    <Route path="/proyecto" component={AgileProjectPage}/>
     <Route path="/rotacion"><TurnoverPage filters={filters} setFilters={setFilters}/></Route>
     <Route path="/diagnostico"><DiagnosticPage filters={filters} setFilters={setFilters}/></Route>
     <Route path="/candidato" component={CandidatePage}/>
