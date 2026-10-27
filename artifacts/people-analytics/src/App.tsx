@@ -38,13 +38,14 @@ function Shell({ children, synthetic }: { children: ReactNode; synthetic: boolea
   const [mobileOpen, setMobileOpen] = useState(false);
   const links = [
     { href: '/', label: 'Resumen', icon: BarChart3 },
-    { href: '/proyecto', label: 'Seguimiento ágil', icon: ClipboardList },
     { href: '/rotacion', label: 'Rotación', icon: TrendingDown },
     { href: '/diagnostico', label: 'Diagnóstico', icon: Activity },
     { href: '/candidato', label: 'Evaluación de apoyo', icon: Users },
     { href: '/datos', label: 'Datos', icon: Database },
     { href: '/modelo', label: 'Modelo y equidad', icon: Gauge },
   ];
+  const retrospective = { href: '/retrospectiva', label: 'Retrospectiva del proyecto', icon: ClipboardList };
+  const currentLabel = location === retrospective.href ? retrospective.label : links.find(l => l.href === location)?.label ?? 'Radar';
   return <div className="app-shell">
     <aside className={`sidebar ${mobileOpen ? 'sidebar-open' : ''}`}>
       <div className="brand"><div className="brand-mark"><Activity size={19}/></div><div><b>RADAR</b><span>PEOPLE ANALYTICS</span></div></div>
@@ -53,6 +54,11 @@ function Shell({ children, synthetic }: { children: ReactNode; synthetic: boolea
         <Link href={href} key={href} onClick={() => setMobileOpen(false)} className={`nav-link ${location === href ? 'active' : ''}`} data-testid={`link-nav-${href.replace('/', '') || 'resumen'}`}>
           <Icon size={18} strokeWidth={1.8}/><span>{label}</span>{location === href && <span className="nav-indicator"/>}
         </Link>)}
+        <div className="sidebar-divider"/>
+        <div className="workspace-label sidebar-secondary-label">PROYECTO</div>
+        <Link href={retrospective.href} onClick={() => setMobileOpen(false)} className={`nav-link nav-link-secondary ${location === retrospective.href ? 'active' : ''}`} data-testid="link-nav-retrospectiva">
+          <ClipboardList size={18} strokeWidth={1.8}/><span>{retrospective.label}</span>{location === retrospective.href && <span className="nav-indicator"/>}
+        </Link>
       </nav>
       <div className="sidebar-foot">
         <div className="privacy-mark"><ShieldCheck size={17}/><span>Uso responsable</span></div>
@@ -64,8 +70,8 @@ function Shell({ children, synthetic }: { children: ReactNode; synthetic: boolea
     <main className="main-frame">
       <header className="topbar">
         <button className="icon-button mobile-menu" aria-label="Abrir menú" onClick={() => setMobileOpen(!mobileOpen)}><Menu size={20}/></button>
-        <div className="crumb"><span>PERSONAS</span><span className="crumb-divider">/</span><strong>{links.find(l => l.href === location)?.label ?? 'Radar'}</strong></div>
-        <div className="top-meta"><span className={`system-status ${location === '/proyecto' ? '' : 'api-unavailable'}`}><span className="pulse-dot"/> {location === '/proyecto' ? 'Seguimiento local' : 'API no configurada'}</span><span className="top-date">{new Date().toLocaleDateString('es-CO', { day: '2-digit', month: 'short', year: 'numeric' })}</span></div>
+        <div className="crumb"><span>PERSONAS</span><span className="crumb-divider">/</span><strong>{currentLabel}</strong></div>
+        <div className="top-meta"><span className={`system-status ${location === retrospective.href ? '' : 'api-unavailable'}`}><span className="pulse-dot"/> {location === retrospective.href ? 'Retrospectiva' : 'API no configurada'}</span><span className="top-date">{new Date().toLocaleDateString('es-CO', { day: '2-digit', month: 'short', year: 'numeric' })}</span></div>
       </header>
       {synthetic && <div className="synthetic-banner" role="status"><Sparkles size={15}/><span><strong>Datos sintéticos</strong> · Este análisis utiliza información de demostración. No representa personas ni resultados reales.</span><span className="synthetic-tag">ENTORNO DEMO</span></div>}
       <div className="page-area">{children}</div>
@@ -359,8 +365,8 @@ function AgileProjectPage() {
   const remaining = chart.at(-1)?.actual ?? s.points;
   const saveCloseout = () => { const body = `# Documento de cierre · ${s.name}\n\nFecha: ${new Date().toLocaleDateString('es-CO')}\n\n## Objetivo\n${s.objective}\n\n## Entregables completados\n${s.deliveredText}\n\n## Pendientes\n${s.pendingText}\n\n## Burndown\nPuntos planificados: ${s.points}. Puntos restantes estimados: ${remaining}.\n\n## Indicadores de rendimiento\nCumplimiento del objetivo: ${s.goal}%. Puntos entregados: ${s.delivered}. Defectos: ${s.defects}. Trabajo en curso: ${s.wip}.\n\n## Métricas DORA\nFrecuencia de despliegue: ${s.deploys}/semana. Tiempo de entrega de cambios: ${s.leadHours} horas. Recuperación de despliegue fallido: ${s.recoveryHours} horas. Tasa de fallos de cambio: ${s.changeFail}%. Tasa de retrabajo de despliegue: ${s.rework}%.\n\n## Aprendizajes\n${s.lessons}\n\n## Próximas acciones\n${s.nextSteps}\n`; const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([body], { type: 'text/markdown;charset=utf-8' })); a.download = `cierre-${s.name.trim().replace(/[^a-z0-9]+/gi,'-').toLowerCase() || 'proyecto'}.md`; a.click(); URL.revokeObjectURL(a.href); };
   const field = (label: string, key: keyof AgileState, type = 'number', unit?: string) => <label className="agile-field"><span>{label}{unit && <small>{unit}</small>}</span><input type={type} value={s[key]} min={type === 'number' ? 0 : undefined} onChange={e => update(key,e.target.value)}/></label>;
-  return <div className="content"><PageTitle eyebrow="PROYECTO · SEGUIMIENTO ÁGIL" title="Avance y entrega, a la vista." subtitle="Burndown, métricas DORA e indicadores editables para orientar la conversación del equipo." action={<Button onClick={saveCloseout}>Descargar cierre</Button>}/>
-    <div className="agile-notice"><ClipboardList size={17}/> Ejemplo inicial editable. Los cambios se guardan solo en este navegador y no se comparten entre lectores del QR.</div>
+  return <div className="content"><PageTitle eyebrow="RETROSPECTIVA DEL PROYECTO · APARTADO COMPLEMENTARIO" title="Revisar cómo trabajamos." subtitle="Un espacio de retrospectiva para registrar el avance, la entrega y los aprendizajes del equipo. Es independiente del análisis de permanencia y del modelo predictivo." action={<Button onClick={saveCloseout}>Descargar cierre</Button>}/>
+    <div className="agile-notice"><ClipboardList size={17}/> Apartado complementario de retrospectiva. No forma parte de los resultados ni del funcionamiento analítico del Radar. Los cambios se guardan solo en este navegador.</div>
     <div className="agile-layout"><Panel title="Burndown del sprint" subtitle="Puntos restantes reales frente al ritmo ideal."><div className="agile-controls">{field('Nombre del sprint','name','text')}{field('Duración','days','number','días')}{field('Puntos planificados','points')}</div><label className="agile-field agile-wide"><span>Puntos completados por día <small>separados por comas</small></span><input value={s.completed} onChange={e=>update('completed',e.target.value)}/></label><div className="burndown-chart"><svg viewBox="0 0 640 240" role="img" aria-label="Gráfico de puntos pendientes por día"><line x1="45" y1="20" x2="45" y2="200"/><line x1="45" y1="200" x2="620" y2="200"/>{chart.map((p,i)=><g key={p.day}><text x={45+i*575/Math.max(1,chart.length-1)} y="222">{p.day}</text>{i>0&&<><line className="ideal-line" x1={45+(i-1)*575/Math.max(1,chart.length-1)} y1={200-(chart[i-1].ideal/Math.max(1,s.points))*170} x2={45+i*575/Math.max(1,chart.length-1)} y2={200-(p.ideal/Math.max(1,s.points))*170}/><line className="actual-line" x1={45+(i-1)*575/Math.max(1,chart.length-1)} y1={200-(chart[i-1].actual/Math.max(1,s.points))*170} x2={45+i*575/Math.max(1,chart.length-1)} y2={200-(p.actual/Math.max(1,s.points))*170}/></>}</g>)}</svg><div className="chart-legend"><span><i className="ideal-dot"/>Ideal</span><span><i className="actual-dot"/>Real</span><b>{remaining} puntos restantes</b></div></div></Panel>
     <Panel title="Indicadores de rendimiento" subtitle="Señales de flujo y entrega a nivel de equipo."><div className="agile-fields">{field('Cumplimiento del objetivo','goal','number','%')}{field('Puntos entregados','delivered')}{field('Defectos encontrados','defects')}{field('Trabajo en curso','wip')}</div><p className="agile-hint">Revisar en conjunto con calidad y contexto; no usar para comparar ni calificar personas.</p></Panel></div>
     <Panel title="Métricas DORA" subtitle="Cinco medidas para observar la entrega de software."><div className="agile-fields">{field('Frecuencia de despliegue','deploys','number','por semana')}{field('Tiempo de entrega de cambios','leadHours','number','horas')}{field('Recuperación de despliegue fallido','recoveryHours','number','horas')}{field('Tasa de fallos de cambio','changeFail','number','%')}{field('Tasa de retrabajo de despliegue','rework','number','%')}</div><p className="agile-hint">Registra periodos comparables. DORA define las métricas de entrega y confiabilidad del software.</p></Panel>
@@ -376,6 +382,7 @@ function Router() {
   const synthetic=status.data?.syntheticData ?? health.data?.syntheticData ?? false;
   return <ErrorBoundary resetKey={location}><Shell synthetic={synthetic}><Switch>
     <Route path="/" component={OverviewPage}/>
+    <Route path="/retrospectiva" component={AgileProjectPage}/>
     <Route path="/proyecto" component={AgileProjectPage}/>
     <Route path="/rotacion"><TurnoverPage filters={filters} setFilters={setFilters}/></Route>
     <Route path="/diagnostico"><DiagnosticPage filters={filters} setFilters={setFilters}/></Route>
