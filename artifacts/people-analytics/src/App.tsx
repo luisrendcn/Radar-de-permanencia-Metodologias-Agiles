@@ -65,7 +65,7 @@ function Shell({ children, synthetic }: { children: ReactNode; synthetic: boolea
       <header className="topbar">
         <button className="icon-button mobile-menu" aria-label="Abrir menú" onClick={() => setMobileOpen(!mobileOpen)}><Menu size={20}/></button>
         <div className="crumb"><span>PERSONAS</span><span className="crumb-divider">/</span><strong>{links.find(l => l.href === location)?.label ?? 'Radar'}</strong></div>
-        <div className="top-meta"><span className="system-status"><span className="pulse-dot"/> API conectada</span><span className="top-date">{new Date().toLocaleDateString('es-CO', { day: '2-digit', month: 'short', year: 'numeric' })}</span></div>
+        <div className="top-meta"><span className={`system-status ${location === '/proyecto' ? '' : 'api-unavailable'}`}><span className="pulse-dot"/> {location === '/proyecto' ? 'Seguimiento local' : 'API no configurada'}</span><span className="top-date">{new Date().toLocaleDateString('es-CO', { day: '2-digit', month: 'short', year: 'numeric' })}</span></div>
       </header>
       {synthetic && <div className="synthetic-banner" role="status"><Sparkles size={15}/><span><strong>Datos sintéticos</strong> · Este análisis utiliza información de demostración. No representa personas ni resultados reales.</span><span className="synthetic-tag">ENTORNO DEMO</span></div>}
       <div className="page-area">{children}</div>
@@ -279,7 +279,7 @@ function DataPage() {
   return <div className="content">
     <PageTitle eyebrow="FUENTES Y PROCESAMIENTO · 05" title="Datos con trazabilidad." subtitle="Importa, mapea y valida fuentes sin alterar los originales."/>
     <div className="inline-warning"><ShieldCheck size={17}/><span>Los archivos se guardan localmente y sin cifrado. Esta versión no tiene inicio de sesión ni roles; en la vista previa del workspace usa datos sintéticos, no datos personales reales.</span></div>
-    <StateMessage loading={status.isLoading} error={status.error} retry={()=>void status.refetch()}/>
+    {status.isError ? <div className="api-unavailable-note"><AlertCircle size={19}/><div><strong>El servicio de datos aún no está desplegado</strong><span>La web está publicada, pero la API que recibe archivos y procesa conjuntos no está conectada en este entorno. Por eso no están disponibles la importación, la validación, los datos demo ni el análisis de esta sección.</span><small>El seguimiento ágil sí funciona y guarda sus cambios en este navegador.</small></div><button className="text-button" onClick={()=>void status.refetch()}>Reintentar</button></div> : <StateMessage loading={status.isLoading} error={undefined} retry={()=>void status.refetch()}/>}
     {status.data && <div className="data-summary"><div className="summary-copy"><div className="eyebrow">ESTADO DEL CONJUNTO</div><h2>{status.data.processed?'Listo para analizar':'Fuentes por preparar'}</h2><p>{status.data.processed?`Último procesamiento: ${date(status.data.lastUpdated)}.`:'Carga fuentes y ejecuta validación antes de procesar.'}</p></div><div className="data-counts"><div><b>{number(status.data.totalHires)}</b><span>contrataciones</span></div><div><b>{number(status.data.eligibleEmployees)}</b><span>elegibles</span></div><div><b>{number(status.data.earlyResignations)}</b><span>salidas tempranas</span></div></div></div>}
     <div className="two-col data-cols">
       <Panel title="Fuentes registradas" subtitle="Estado y volumen por sistema de origen." action={<span className="panel-count">{status.data?.sources.length ?? 0} fuentes</span>}>
@@ -303,7 +303,7 @@ function DataPage() {
     </Panel>}
     <Panel title="Acciones de procesamiento" subtitle="Las operaciones reportan el resultado del servicio y actualizan las vistas relacionadas." className="etl-panel">
       <div className="etl-steps"><div><span className="step-num">01</span><b>Fuente original</b><small>Archivo preservado</small></div><ArrowRight size={15}/><div><span className="step-num">02</span><b>Validación</b><small>Calidad y coherencia</small></div><ArrowRight size={15}/><div><span className="step-num">03</span><b>ETL</b><small>Esquema analítico</small></div></div>
-      <Button kind="secondary" disabled={demo.isPending} onClick={actions[0].run}>{demo.isPending?'Generando…':'Generar datos sintéticos de demostración'}</Button>
+      <Button kind="secondary" disabled={demo.isPending || status.isError} onClick={actions[0].run}>{demo.isPending?'Generando…':'Generar datos sintéticos de demostración'}</Button>
       {demo.error&&<div className="inline-error">{errText(demo.error)}</div>}
     </Panel>
   </div>;
