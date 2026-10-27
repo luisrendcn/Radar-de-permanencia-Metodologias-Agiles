@@ -1,0 +1,13 @@
+{
+  "synthetic_data": true,
+  "seed": 7412026,
+  "as_of": "2026-10-20",
+  "employee_count": 720,
+  "sources": [
+    "ats",
+    "payroll",
+    "performance",
+    "exit_surveys"
+  ],
+  "notice": "Datos totalmente ficticios para demostración; no son evidencia empresarial."
+}

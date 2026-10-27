@@ -1,0 +1,671 @@
+openapi: 3.1.0
+info:
+  # Keep this title: Orval uses it to derive generated import paths.
+  title: Api
+  version: 1.0.0
+  description: API portable de Radar de Permanencia. FastAPI ejecutable localmente.
+servers:
+  - url: /people-api
+    description: FastAPI local (prefijo para desarrollo y vista previa)
+tags:
+  - name: system
+  - name: datasets
+  - name: analytics
+  - name: model
+  - name: settings
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [system]
+      summary: Estado de la aplicación
+      responses:
+        "200":
+          description: API disponible
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /datasets/status:
+    get:
+      operationId: getDatasetStatus
+      tags: [datasets]
+      summary: Estado de las fuentes y datos procesados
+      responses:
+        "200":
+          description: Estado del dataset
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DatasetStatus"
+  /datasets/demo:
+    post:
+      operationId: generateDemoData
+      tags: [datasets]
+      summary: Generar fuentes sintéticas reproducibles
+      responses:
+        "200":
+          description: Datos demo generados
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DatasetStatus"
+  /datasets/upload:
+    post:
+      operationId: uploadDataset
+      tags: [datasets]
+      summary: Importar una fuente CSV o XLSX conservando el original
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DatasetUploadInput"
+      responses:
+        "200":
+          description: Fuente guardada y lista para mapear
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UploadPreview"
+        "400":
+          description: Archivo o formato inválido
+  /datasets/mapping:
+    post:
+      operationId: saveDatasetMapping
+      tags: [datasets]
+      summary: Mapear columnas de una fuente al esquema analítico
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ColumnMappingInput"
+      responses:
+        "200":
+          description: Mapeo guardado
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MappingResult"
+  /datasets/validate:
+    post:
+      operationId: validateDataset
+      tags: [datasets]
+      summary: Validar calidad y coherencia de las fuentes
+      responses:
+        "200":
+          description: Reporte de validación
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ValidationReport"
+  /datasets/etl:
+    post:
+      operationId: runDatasetEtl
+      tags: [datasets]
+      summary: Unificar y procesar fuentes sin alterar originales
+      responses:
+        "200":
+          description: Resultado del procesamiento
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EtlResult"
+  /analytics/overview:
+    get:
+      operationId: getAnalyticsOverview
+      tags: [analytics]
+      summary: Resumen ejecutivo del análisis
+      responses:
+        "200":
+          description: Resumen ejecutivo
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Overview"
+  /analytics/turnover:
+    get:
+      operationId: getTurnoverAnalytics
+      tags: [analytics]
+      summary: Rotación temprana por cohorte y antigüedad
+      parameters:
+        - $ref: "#/components/parameters/startMonth"
+        - $ref: "#/components/parameters/endMonth"
+        - $ref: "#/components/parameters/campaign"
+        - $ref: "#/components/parameters/shift"
+        - $ref: "#/components/parameters/supervisor"
+      responses:
+        "200":
+          description: Métricas filtradas de rotación
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TurnoverAnalytics"
+  /analytics/diagnostic:
+    get:
+      operationId: getDiagnosticAnalytics
+      tags: [analytics]
+      summary: Factores asociados, recomendaciones y limitaciones
+      parameters:
+        - $ref: "#/components/parameters/startMonth"
+        - $ref: "#/components/parameters/endMonth"
+        - $ref: "#/components/parameters/campaign"
+        - $ref: "#/components/parameters/shift"
+        - $ref: "#/components/parameters/supervisor"
+      responses:
+        "200":
+          description: Diagnóstico respaldado por datos
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Diagnostic"
+  /settings/costs:
+    get:
+      operationId: getCostSettings
+      tags: [settings]
+      summary: Consultar supuestos editables de costo
+      responses:
+        "200":
+          description: Costos configurados localmente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CostSettings"
+    put:
+      operationId: updateCostSettings
+      tags: [settings]
+      summary: Guardar costos reales o estimados
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CostSettingsInput"
+      responses:
+        "200":
+          description: Costos actualizados
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CostSettings"
+  /model/status:
+    get:
+      operationId: getModelStatus
+      tags: [model]
+      summary: Estado, versión y evaluación del modelo
+      responses:
+        "200":
+          description: Estado del modelo
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ModelStatus"
+  /model/train:
+    post:
+      operationId: trainModel
+      tags: [model]
+      summary: Entrenar y evaluar regresión logística
+      responses:
+        "200":
+          description: Resultado real del entrenamiento
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ModelStatus"
+        "409":
+          description: Datos insuficientes o una sola clase
+  /model/predict:
+    post:
+      operationId: predictCandidateRisk
+      tags: [model]
+      summary: Estimar riesgo con variables disponibles en entrevista
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CandidateInput"
+      responses:
+        "200":
+          description: Estimación individual explicable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CandidatePrediction"
+        "409":
+          description: No hay modelo evaluable disponible
+  /model/fairness:
+    get:
+      operationId: getFairnessStatus
+      tags: [model]
+      summary: Disponibilidad de evaluación de equidad entre grupos
+      responses:
+        "200":
+          description: Estado y limitaciones de la evaluación
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FairnessStatus"
+components:
+  parameters:
+    startMonth:
+      name: startMonth
+      in: query
+      required: false
+      schema: { type: string, format: date }
+    endMonth:
+      name: endMonth
+      in: query
+      required: false
+      schema: { type: string, format: date }
+    campaign:
+      name: campaign
+      in: query
+      required: false
+      schema: { type: string }
+    shift:
+      name: shift
+      in: query
+      required: false
+      schema: { type: string }
+    supervisor:
+      name: supervisor
+      in: query
+      required: false
+      schema: { type: string }
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status: { type: string }
+        syntheticData: { type: boolean }
+      required: [status, syntheticData]
+    SourceStatus:
+      type: object
+      properties:
+        source: { type: string }
+        label: { type: string }
+        state: { type: string }
+        records: { type: integer }
+        filename: { type: ["string", "null"] }
+        columns:
+          type: array
+          items: { type: string }
+      required: [source, label, state, records, filename, columns]
+    DatasetStatus:
+      type: object
+      properties:
+        syntheticData: { type: boolean }
+        processed: { type: boolean }
+        lastUpdated: { type: ["string", "null"], format: date-time }
+        sources:
+          type: array
+          items: { $ref: "#/components/schemas/SourceStatus" }
+        totalHires: { type: integer }
+        earlyResignations: { type: integer }
+        eligibleEmployees: { type: integer }
+        censoredEmployees: { type: integer }
+        involuntaryExits: { type: integer }
+        turnoverRate: { type: ["number", "null"] }
+      required: [syntheticData, processed, lastUpdated, sources, totalHires, earlyResignations, eligibleEmployees, censoredEmployees, involuntaryExits, turnoverRate]
+    DatasetUploadInput:
+      type: object
+      properties:
+        source:
+          type: string
+          enum: [ats, payroll, performance, exit_surveys]
+        fileName: { type: string, minLength: 1 }
+        contentBase64: { type: string, minLength: 1 }
+      required: [source, fileName, contentBase64]
+    UploadPreview:
+      type: object
+      properties:
+        source: { type: string }
+        fileName: { type: string }
+        records: { type: integer }
+        columns:
+          type: array
+          items: { type: string }
+        sampleRows:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        detectedMapping:
+          type: object
+          additionalProperties: { type: string }
+        message: { type: string }
+      required: [source, fileName, records, columns, sampleRows, detectedMapping, message]
+    ColumnMappingInput:
+      type: object
+      properties:
+        source:
+          type: string
+          enum: [ats, payroll, performance, exit_surveys]
+        mapping:
+          type: object
+          additionalProperties: { type: string }
+      required: [source, mapping]
+    MappingResult:
+      type: object
+      properties:
+        source: { type: string }
+        mappedFields:
+          type: array
+          items: { type: string }
+        requiredFields:
+          type: array
+          items: { type: string }
+        ready: { type: boolean }
+        message: { type: string }
+      required: [source, mappedFields, requiredFields, ready, message]
+    QualityIssue:
+      type: object
+      properties:
+        code: { type: string }
+        severity: { type: string }
+        source: { type: string }
+        message: { type: string }
+        count: { type: integer }
+      required: [code, severity, source, message, count]
+    ValidationReport:
+      type: object
+      properties:
+        valid: { type: boolean }
+        totalRecords: { type: integer }
+        duplicateIds: { type: integer }
+        missingValues: { type: integer }
+        invalidDates: { type: integer }
+        unmatchedRecords: { type: integer }
+        issues:
+          type: array
+          items: { $ref: "#/components/schemas/QualityIssue" }
+        missingByField:
+          type: object
+          additionalProperties: { type: integer }
+      required: [valid, totalRecords, duplicateIds, missingValues, invalidDates, unmatchedRecords, issues, missingByField]
+    EtlResult:
+      type: object
+      properties:
+        success: { type: boolean }
+        records: { type: integer }
+        eligibleEmployees: { type: integer }
+        earlyResignations: { type: integer }
+        indeterminate: { type: integer }
+        involuntaryExits: { type: integer }
+        syntheticData: { type: boolean }
+        message: { type: string }
+      required: [success, records, eligibleEmployees, earlyResignations, indeterminate, involuntaryExits, syntheticData, message]
+    CohortMetric:
+      type: object
+      properties:
+        cohort: { type: string }
+        hires: { type: integer }
+        eligible: { type: integer }
+        earlyResignations: { type: integer }
+        rate: { type: ["number", "null"] }
+        critical: { type: boolean }
+      required: [cohort, hires, eligible, earlyResignations, rate, critical]
+    TenureMetric:
+      type: object
+      properties:
+        month: { type: integer }
+        resignations: { type: integer }
+        share: { type: number }
+      required: [month, resignations, share]
+    SupervisorMetric:
+      type: object
+      properties:
+        supervisor: { type: string }
+        sampleSize: { type: integer }
+        retained: { type: integer }
+        retentionRate: { type: ["number", "null"] }
+        suppressed: { type: boolean }
+      required: [supervisor, sampleSize, retained, retentionRate, suppressed]
+    TurnoverAnalytics:
+      type: object
+      properties:
+        syntheticData: { type: boolean }
+        filters:
+          type: object
+          additionalProperties: { type: ["string", "null"] }
+        availableFilters:
+          type: object
+          properties:
+            campaigns: { type: array, items: { type: string } }
+            shifts: { type: array, items: { type: string } }
+            supervisors: { type: array, items: { type: string } }
+          required: [campaigns, shifts, supervisors]
+        eligible: { type: integer }
+        earlyResignations: { type: integer }
+        turnoverRate: { type: ["number", "null"] }
+        cohorts:
+          type: array
+          items: { $ref: "#/components/schemas/CohortMetric" }
+        tenureDistribution:
+          type: array
+          items: { $ref: "#/components/schemas/TenureMetric" }
+        supervisors:
+          type: array
+          items: { $ref: "#/components/schemas/SupervisorMetric" }
+        criticalMonth: { type: ["integer", "null"] }
+        notes:
+          type: array
+          items: { type: string }
+      required: [syntheticData, filters, availableFilters, eligible, earlyResignations, turnoverRate, cohorts, tenureDistribution, supervisors, criticalMonth, notes]
+    Finding:
+      type: object
+      properties:
+        title: { type: string }
+        evidence: { type: string }
+        sampleSize: { type: integer }
+        limitation: { type: string }
+        recommendation: { type: string }
+      required: [title, evidence, sampleSize, limitation, recommendation]
+    TechnicalBand:
+      type: object
+      properties:
+        band: { type: string }
+        sampleSize: { type: integer }
+        events: { type: integer }
+        rate: { type: ["number", "null"] }
+      required: [band, sampleSize, events, rate]
+    ProfileRate:
+      type: object
+      properties:
+        dimension: { type: string }
+        value: { type: string }
+        sampleSize: { type: integer }
+        events: { type: integer }
+        rate: { type: number }
+      required: [dimension, value, sampleSize, events, rate]
+    ExitReason:
+      type: object
+      properties:
+        reason: { type: string }
+        count: { type: integer }
+        percentage: { type: number }
+      required: [reason, count, percentage]
+    Diagnostic:
+      type: object
+      properties:
+        syntheticData: { type: boolean }
+        sampleSize: { type: integer }
+        period: { type: string }
+        findings:
+          type: array
+          items: { $ref: "#/components/schemas/Finding" }
+        technicalBands:
+          type: array
+          items: { $ref: "#/components/schemas/TechnicalBand" }
+        technicalConclusion:
+          type: string
+          enum: ["Sirve", "No sirve", "No es concluyente"]
+        technicalEvidence:
+          type: object
+          properties:
+            method: { type: string }
+            correlation: { type: ["number", "null"] }
+            pValue: { type: ["number", "null"] }
+            sampleSize: { type: integer }
+            minimumSampleSize: { type: integer }
+            note: { type: string }
+          required: [method, correlation, pValue, sampleSize, minimumSampleSize, note]
+        topProfiles:
+          type: array
+          items: { $ref: "#/components/schemas/ProfileRate" }
+        exitReasons:
+          type: array
+          items: { $ref: "#/components/schemas/ExitReason" }
+        reasonContext:
+          type: array
+          items:
+            type: object
+            properties:
+              reason: { type: string }
+              sampleSize: { type: integer }
+              topCampaign: { type: ["string", "null"] }
+              topShift: { type: ["string", "null"] }
+              topSupervisor: { type: ["string", "null"] }
+              averageTechnicalScore: { type: ["number", "null"] }
+              limitation: { type: string }
+            required: [reason, sampleSize, topCampaign, topShift, topSupervisor, averageTechnicalScore, limitation]
+        reasonAvailability: { type: string }
+        limitations:
+          type: array
+          items: { type: string }
+      required: [syntheticData, sampleSize, period, findings, technicalBands, technicalConclusion, technicalEvidence, topProfiles, exitReasons, reasonContext, reasonAvailability, limitations]
+    Overview:
+      type: object
+      properties:
+        syntheticData: { type: boolean }
+        datasetReady: { type: boolean }
+        totalHires: { type: integer }
+        earlyResignations: { type: integer }
+        eligibleEmployees: { type: integer }
+        censoredEmployees: { type: integer }
+        involuntaryExits: { type: integer }
+        turnoverRate: { type: ["number", "null"] }
+        previousRate: { type: ["number", "null"] }
+        modelTrained: { type: boolean }
+        criticalMonth: { type: ["integer", "null"] }
+        highlights:
+          type: array
+          items: { type: string }
+      required: [syntheticData, datasetReady, totalHires, earlyResignations, eligibleEmployees, censoredEmployees, involuntaryExits, turnoverRate, previousRate, modelTrained, criticalMonth, highlights]
+    CostSettingsInput:
+      type: object
+      properties:
+        recruitment: { type: number, minimum: 0 }
+        training: { type: number, minimum: 0 }
+        idleTime: { type: number, minimum: 0 }
+        currency: { type: string }
+        source: { type: string, enum: [real, estimated] }
+      required: [recruitment, training, idleTime, currency, source]
+    CostSettings:
+      allOf:
+        - $ref: "#/components/schemas/CostSettingsInput"
+        - type: object
+          properties:
+            replacementCost: { type: number }
+            totalCost: { type: number }
+            earlyResignations: { type: integer }
+          required: [replacementCost, totalCost, earlyResignations]
+    ModelMetrics:
+      type: object
+      properties:
+        accuracy: { type: ["number", "null"] }
+        precision: { type: ["number", "null"] }
+        recall: { type: ["number", "null"] }
+        f1: { type: ["number", "null"] }
+        rocAuc: { type: ["number", "null"] }
+        falsePositiveRate: { type: ["number", "null"] }
+        baselineRecall: { type: ["number", "null"] }
+        baselineFalsePositiveRate: { type: ["number", "null"] }
+        confusionMatrix:
+          type: array
+          items:
+            type: array
+            items: { type: integer }
+        testObservations: { type: integer }
+      required: [accuracy, precision, recall, f1, rocAuc, falsePositiveRate, baselineRecall, baselineFalsePositiveRate, confusionMatrix, testObservations]
+    ModelStatus:
+      type: object
+      properties:
+        trained: { type: boolean }
+        readyForPrediction: { type: boolean }
+        version: { type: ["string", "null"] }
+        trainedAt: { type: ["string", "null"], format: date-time }
+        observations: { type: integer }
+        eventCount: { type: integer }
+        metrics:
+          oneOf:
+            - $ref: "#/components/schemas/ModelMetrics"
+            - type: "null"
+        features:
+          type: array
+          items: { type: string }
+        excludedFeatures:
+          type: array
+          items: { type: string }
+        message: { type: string }
+        thresholds:
+          type: object
+          properties:
+            low: { type: number }
+            high: { type: number }
+            provisional: { type: boolean }
+          required: [low, high, provisional]
+      required: [trained, readyForPrediction, version, trainedAt, observations, eventCount, metrics, features, excludedFeatures, message, thresholds]
+    CandidateInput:
+      type: object
+      properties:
+        technicalScore: { type: number, minimum: 0, maximum: 100 }
+        priorBpoExperienceYears: { type: number, minimum: 0, maximum: 60 }
+        campaign: { type: string, minLength: 1 }
+        preferredShift:
+          type: string
+          enum: [day, evening, night]
+        scheduleAvailability:
+          type: string
+          enum: [flexible, fixed]
+      required: [technicalScore, priorBpoExperienceYears, campaign, preferredShift, scheduleAvailability]
+    RiskContribution:
+      type: object
+      properties:
+        factor: { type: string }
+        value: { type: string }
+        effect: { type: string, enum: [increases, decreases] }
+        contribution: { type: number }
+      required: [factor, value, effect, contribution]
+    CandidatePrediction:
+      type: object
+      properties:
+        probability: { type: number }
+        risk: { type: string, enum: [Bajo, Medio, Alto] }
+        factors:
+          type: array
+          items: { $ref: "#/components/schemas/RiskContribution" }
+        actions:
+          type: array
+          items: { type: string }
+        modelVersion: { type: string }
+        modelDate: { type: string, format: date-time }
+        uncertainty: { type: string }
+        decisionNotice: { type: string }
+      required: [probability, risk, factors, actions, modelVersion, modelDate, uncertainty, decisionNotice]
+    FairnessStatus:
+      type: object
+      properties:
+        evaluated: { type: boolean }
+        status: { type: string }
+        groupsAvailable:
+          type: array
+          items: { type: string }
+        note: { type: string }
+        excludedFeatures:
+          type: array
+          items: { type: string }
+      required: [evaluated, status, groupsAvailable, note, excludedFeatures]
+

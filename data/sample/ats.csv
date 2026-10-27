@@ -1,0 +1,721 @@
+﻿employee_id,hire_date,campaign,shift,supervisor,technical_score,prior_bpo_experience_years,preferred_shift,schedule_availability,synthetic_data
+SYN-00001,2025-09-19,Soporte técnico,Día,Sup. A,85.9,0.0,day,flexible,true
+SYN-00002,2024-04-25,Atención digital,Noche,Sup. B,65.9,0.9,night,flexible,true
+SYN-00003,2025-08-21,Ventas,Día,Sup. C,92.6,0.0,day,fixed,true
+SYN-00004,2024-10-10,Atención digital,Día,Sup. D,76.3,3.3,day,flexible,true
+SYN-00005,2024-05-06,Soporte técnico,Tarde,Sup. E,77.1,1.5,evening,flexible,true
+SYN-00006,2024-04-27,Atención digital,Noche,Sup. F,84.3,1.5,night,flexible,true
+SYN-00007,2024-08-27,Soporte técnico,Noche,Sup. G,92.0,1.7,night,flexible,true
+SYN-00008,2025-09-11,Atención digital,Día,Sup. H,73.9,1.6,day,fixed,true
+SYN-00009,2026-10-04,Ventas,Noche,Sup. A,100.0,,night,flexible,true
+SYN-00010,2026-03-05,Soporte técnico,Noche,Sup. B,63.2,3.1,night,flexible,true
+SYN-00011,2025-07-07,Atención digital,Día,Sup. C,84.4,0.0,day,fixed,true
+SYN-00012,2024-05-15,Soporte técnico,Tarde,Sup. D,59.4,2.6,evening,fixed,true
+SYN-00013,2024-02-22,Retención,Día,Sup. E,63.4,0.0,day,flexible,true
+SYN-00014,2026-05-05,Soporte técnico,Tarde,Sup. F,83.1,0.6,evening,flexible,true
+SYN-00015,2024-12-27,Ventas,Noche,Sup. G,81.4,2.2,night,flexible,true
+SYN-00016,2025-06-18,Soporte técnico,Tarde,Sup. H,86.7,0.4,evening,fixed,true
+SYN-00017,2026-01-02,Soporte técnico,Tarde,Sup. A,76.3,0.5,evening,flexible,true
+SYN-00018,2024-01-07,Ventas,Día,Sup. B,98.8,0.9,day,flexible,true
+SYN-00019,2024-02-07,Soporte técnico,Día,Sup. C,93.7,3.2,day,flexible,true
+SYN-00020,2026-06-29,Soporte técnico,Noche,Sup. D,81.7,4.0,night,flexible,true
+SYN-00021,2024-01-24,Atención digital,Noche,Sup. E,85.1,0.5,night,flexible,true
+SYN-00022,2024-07-06,Retención,Noche,Sup. F,68.4,,night,flexible,true
+SYN-00023,2024-11-03,Ventas,Noche,Sup. G,73.0,3.2,night,flexible,true
+SYN-00024,2024-08-06,Atención digital,Noche,Sup. H,61.4,1.4,night,flexible,true
+SYN-00025,2025-10-15,Atención digital,Día,Sup. A,84.7,1.1,day,fixed,true
+SYN-00026,2024-05-17,Retención,Tarde,Sup. B,75.3,0.5,evening,fixed,true
+SYN-00027,2024-04-15,Ventas,Tarde,Sup. C,55.8,0.0,evening,flexible,true
+SYN-00028,2024-07-30,Atención digital,Tarde,Sup. D,61.8,0.5,evening,flexible,true
+SYN-00029,2026-08-31,Ventas,Noche,Sup. E,97.6,0.0,night,flexible,true
+SYN-00030,2026-09-03,Retención,Tarde,Sup. F,76.8,0.7,evening,fixed,true
+SYN-00031,2025-01-27,Ventas,Noche,Sup. G,78.7,0.0,night,fixed,true
+SYN-00032,2024-12-19,Ventas,Tarde,Sup. H,82.9,0.0,evening,flexible,true
+SYN-00033,2024-10-20,Atención digital,Día,Sup. A,77.3,3.2,day,flexible,true
+SYN-00034,2024-07-29,Ventas,Día,Sup. B,85.4,0.7,day,flexible,true
+SYN-00035,2024-12-29,Atención digital,Día,Sup. C,69.7,1.4,day,fixed,true
+SYN-00036,2024-11-13,Soporte técnico,Día,Sup. D,76.1,0.0,day,fixed,true
+SYN-00037,2025-02-09,Soporte técnico,Día,Sup. E,78.0,3.5,day,fixed,true
+SYN-00038,2025-12-11,Retención,Día,Sup. F,71.8,2.2,day,flexible,true
+SYN-00039,2025-03-23,Retención,Tarde,Sup. G,77.2,2.5,evening,flexible,true
+SYN-00040,2024-01-31,Soporte técnico,Tarde,Sup. H,95.3,0.0,evening,flexible,true
+SYN-00041,2024-08-15,Ventas,Noche,Sup. A,71.2,,night,flexible,true
+SYN-00042,2024-05-27,Ventas,Noche,Sup. B,57.4,1.4,night,flexible,true
+SYN-00043,2025-03-10,Soporte técnico,Día,Sup. C,83.4,2.4,day,fixed,true
+SYN-00044,2026-03-01,Retención,Tarde,Sup. D,46.1,0.0,evening,flexible,true
+SYN-00045,2024-08-03,Atención digital,Noche,Sup. E,70.9,0.0,night,fixed,true
+SYN-00046,2025-06-18,Retención,Tarde,Sup. F,76.8,2.5,evening,fixed,true
+SYN-00047,2024-02-16,Ventas,Día,Sup. G,62.9,2.5,day,flexible,true
+SYN-00048,2024-09-08,Retención,Tarde,Sup. H,82.9,7.3,evening,flexible,true
+SYN-00049,2026-06-25,Ventas,Tarde,Sup. A,60.2,1.2,evening,flexible,true
+SYN-00050,2025-12-22,Soporte técnico,Día,Sup. B,89.5,0.5,day,flexible,true
+SYN-00051,2026-08-22,Atención digital,Tarde,Sup. C,57.9,3.0,evening,flexible,true
+SYN-00052,2024-03-15,Atención digital,Día,Sup. D,77.3,0.3,day,flexible,true
+SYN-00053,2026-07-28,Retención,Día,Sup. E,67.5,0.0,day,flexible,true
+SYN-00054,2025-09-10,Retención,Noche,Sup. F,87.1,0.4,night,flexible,true
+SYN-00055,2025-12-09,Soporte técnico,Día,Sup. G,57.2,,day,flexible,true
+SYN-00056,2026-06-02,Ventas,Día,Sup. H,76.7,3.3,day,flexible,true
+SYN-00057,2026-02-18,Ventas,Tarde,Sup. A,50.0,0.6,evening,flexible,true
+SYN-00058,2026-08-25,Soporte técnico,Tarde,Sup. B,70.5,0.0,evening,fixed,true
+SYN-00059,2026-01-18,Soporte técnico,Tarde,Sup. C,70.2,4.1,evening,fixed,true
+SYN-00060,2025-06-21,Atención digital,Tarde,Sup. D,74.2,,evening,flexible,true
+SYN-00061,2025-11-30,Soporte técnico,Día,Sup. E,69.1,2.3,day,flexible,true
+SYN-00062,2025-05-22,Atención digital,Tarde,Sup. F,69.5,0.8,evening,flexible,true
+SYN-00063,2025-12-31,Atención digital,Noche,Sup. G,62.2,2.0,night,fixed,true
+SYN-00064,2024-07-17,Soporte técnico,Tarde,Sup. H,68.8,0.0,evening,fixed,true
+SYN-00065,2025-01-02,Atención digital,Noche,Sup. A,72.4,0.0,night,fixed,true
+SYN-00066,2024-06-24,Retención,Tarde,Sup. B,93.6,2.9,evening,flexible,true
+SYN-00067,2025-01-04,Ventas,Día,Sup. C,84.6,0.5,day,flexible,true
+SYN-00068,2024-06-05,Ventas,Noche,Sup. D,77.3,,night,fixed,true
+SYN-00069,2026-07-05,Atención digital,Noche,Sup. E,72.8,0.0,night,flexible,true
+SYN-00070,2026-09-05,Atención digital,Tarde,Sup. F,69.0,5.1,evening,flexible,true
+SYN-00071,2026-01-13,Soporte técnico,Día,Sup. G,71.9,2.3,day,flexible,true
+SYN-00072,2025-05-06,Atención digital,Día,Sup. H,60.8,,day,fixed,true
+SYN-00073,2024-11-03,Ventas,Día,Sup. A,,0.0,day,fixed,true
+SYN-00074,2024-02-27,Atención digital,Día,Sup. B,80.2,3.1,day,flexible,true
+SYN-00075,2025-03-29,Soporte técnico,Tarde,Sup. C,,2.3,evening,fixed,true
+SYN-00076,2024-01-16,Soporte técnico,Día,Sup. D,90.9,1.8,day,flexible,true
+SYN-00077,2024-08-29,Retención,Tarde,Sup. E,53.6,2.4,evening,flexible,true
+SYN-00078,2026-05-11,Atención digital,Día,Sup. F,78.6,1.9,day,fixed,true
+SYN-00079,2025-09-30,Soporte técnico,Noche,Sup. G,84.1,0.7,night,fixed,true
+SYN-00080,2026-10-05,Ventas,Día,Sup. H,54.5,0.2,day,fixed,true
+SYN-00081,2024-02-05,Ventas,Tarde,Sup. A,79.2,0.8,evening,fixed,true
+SYN-00082,2024-04-14,Soporte técnico,Noche,Sup. B,61.1,0.0,night,flexible,true
+SYN-00083,2026-03-23,Atención digital,Día,Sup. C,84.1,0.9,day,flexible,true
+SYN-00084,2026-01-08,Atención digital,Tarde,Sup. D,72.8,0.4,evening,flexible,true
+SYN-00085,2025-09-01,Retención,Día,Sup. E,94.1,0.0,day,fixed,true
+SYN-00086,2024-10-20,Retención,Tarde,Sup. F,69.8,0.6,evening,flexible,true
+SYN-00087,2026-01-22,Retención,Día,Sup. G,80.5,1.6,day,flexible,true
+SYN-00088,2024-10-20,Ventas,Noche,Sup. H,79.4,1.4,night,flexible,true
+SYN-00089,2024-06-05,Atención digital,Tarde,Sup. A,70.0,0.0,evening,flexible,true
+SYN-00090,2025-03-02,Atención digital,Tarde,Sup. B,47.8,0.0,evening,fixed,true
+SYN-00091,2026-02-27,Soporte técnico,Tarde,Sup. C,67.4,1.7,evening,flexible,true
+SYN-00092,2024-06-09,Atención digital,Tarde,Sup. D,59.3,2.3,evening,flexible,true
+SYN-00093,2024-07-16,Soporte técnico,Tarde,Sup. E,80.1,1.6,evening,flexible,true
+SYN-00094,2025-08-27,Ventas,Día,Sup. F,74.4,0.1,day,flexible,true
+SYN-00095,2024-03-25,Retención,Noche,Sup. G,79.5,0.0,night,flexible,true
+SYN-00096,2025-09-18,Retención,Noche,Sup. H,81.7,0.0,night,fixed,true
+SYN-00097,2025-04-08,Ventas,Día,Sup. A,77.5,0.0,day,flexible,true
+SYN-00098,2026-02-09,Atención digital,Día,Sup. B,58.3,3.5,day,fixed,true
+SYN-00099,2024-07-19,Atención digital,Noche,Sup. C,69.8,2.4,night,fixed,true
+SYN-00100,2026-07-27,Retención,Tarde,Sup. D,83.7,0.0,evening,fixed,true
+SYN-00101,2026-05-07,Retención,Tarde,Sup. E,84.7,0.0,evening,flexible,true
+SYN-00102,2025-09-24,Atención digital,Noche,Sup. F,74.3,2.0,night,fixed,true
+SYN-00103,2026-08-21,Ventas,Día,Sup. G,74.3,1.1,day,flexible,true
+SYN-00104,2025-09-28,Soporte técnico,Noche,Sup. H,,0.6,night,flexible,true
+SYN-00105,2024-02-04,Ventas,Día,Sup. A,78.2,0.9,day,fixed,true
+SYN-00106,2025-05-12,Retención,Día,Sup. B,65.3,2.3,day,fixed,true
+SYN-00107,2026-02-23,Soporte técnico,Tarde,Sup. C,99.1,,evening,flexible,true
+SYN-00108,2025-07-17,Retención,Tarde,Sup. D,89.7,4.7,evening,flexible,true
+SYN-00109,2025-02-07,Ventas,Día,Sup. E,81.5,1.9,day,flexible,true
+SYN-00110,2026-06-10,Soporte técnico,Noche,Sup. F,80.6,3.9,night,flexible,true
+SYN-00111,2024-08-16,Soporte técnico,Día,Sup. G,57.7,2.1,day,flexible,true
+SYN-00112,2024-04-03,Ventas,Noche,Sup. H,72.3,0.0,night,flexible,true
+SYN-00113,2025-08-26,Soporte técnico,Tarde,Sup. A,61.7,0.5,evening,flexible,true
+SYN-00114,2025-07-11,Soporte técnico,Día,Sup. B,80.3,0.0,day,fixed,true
+SYN-00115,2024-05-12,Soporte técnico,Tarde,Sup. C,65.6,1.1,evening,fixed,true
+SYN-00116,2024-07-18,Atención digital,Día,Sup. D,63.0,0.0,day,flexible,true
+SYN-00117,2025-10-26,Retención,Día,Sup. E,77.5,3.1,day,flexible,true
+SYN-00118,2026-07-05,Soporte técnico,Día,Sup. F,52.8,1.0,day,flexible,true
+SYN-00119,2024-01-17,Atención digital,Tarde,Sup. G,96.4,0.8,evening,flexible,true
+SYN-00120,2024-02-21,Soporte técnico,Tarde,Sup. H,73.9,0.7,evening,flexible,true
+SYN-00121,2024-12-21,Soporte técnico,Día,Sup. A,62.0,1.3,day,flexible,true
+SYN-00122,2024-07-26,Ventas,Día,Sup. B,58.6,2.3,day,fixed,true
+SYN-00123,2026-09-15,Retención,Noche,Sup. C,67.6,,night,flexible,true
+SYN-00124,2024-11-27,Atención digital,Noche,Sup. D,71.8,4.1,night,fixed,true
+SYN-00125,2026-04-09,Ventas,Noche,Sup. E,68.4,4.3,night,flexible,true
+SYN-00126,2026-04-08,Retención,Día,Sup. F,79.4,1.1,day,flexible,true
+SYN-00127,2024-01-17,Ventas,Noche,Sup. G,77.6,2.4,night,flexible,true
+SYN-00128,2024-11-07,Ventas,Noche,Sup. H,70.9,0.5,night,fixed,true
+SYN-00129,2025-06-21,Retención,Noche,Sup. A,68.5,2.0,night,fixed,true
+SYN-00130,2024-06-21,Atención digital,Tarde,Sup. B,83.9,0.1,evening,fixed,true
+SYN-00131,2026-04-04,Atención digital,Día,Sup. C,80.5,1.0,day,flexible,true
+SYN-00132,2024-12-25,Retención,Día,Sup. D,96.6,3.4,day,flexible,true
+SYN-00133,2025-11-01,Retención,Día,Sup. E,67.1,0.8,day,fixed,true
+SYN-00134,2024-09-18,Soporte técnico,Tarde,Sup. F,75.8,2.0,evening,fixed,true
+SYN-00135,2026-02-14,Ventas,Día,Sup. G,64.1,3.6,day,flexible,true
+SYN-00136,2024-12-01,Atención digital,Día,Sup. H,81.7,2.7,day,flexible,true
+SYN-00137,2025-05-08,Soporte técnico,Día,Sup. A,54.4,0.0,day,flexible,true
+SYN-00138,2026-09-03,Ventas,Tarde,Sup. B,96.9,2.8,evening,flexible,true
+SYN-00139,2025-09-19,Atención digital,Noche,Sup. C,82.4,1.0,night,fixed,true
+SYN-00140,2024-07-30,Atención digital,Noche,Sup. D,51.6,2.7,night,fixed,true
+SYN-00141,2024-12-08,Retención,Día,Sup. E,66.9,0.3,day,flexible,true
+SYN-00142,2026-06-25,Ventas,Noche,Sup. F,70.8,0.0,night,fixed,true
+SYN-00143,2026-03-04,Ventas,Día,Sup. G,75.0,0.2,day,flexible,true
+SYN-00144,2024-04-19,Ventas,Día,Sup. H,54.8,0.0,day,fixed,true
+SYN-00145,2026-05-28,Ventas,Noche,Sup. A,58.7,1.5,night,flexible,true
+SYN-00146,2026-05-04,Soporte técnico,Día,Sup. B,87.0,2.0,day,flexible,true
+SYN-00147,2024-06-10,Retención,Tarde,Sup. C,63.8,2.5,evening,fixed,true
+SYN-00148,2025-04-06,Soporte técnico,Noche,Sup. D,81.4,1.2,night,flexible,true
+SYN-00149,2025-12-22,Retención,Día,Sup. E,86.5,1.7,day,flexible,true
+SYN-00150,2024-07-21,Soporte técnico,Tarde,Sup. F,71.6,2.2,evening,flexible,true
+SYN-00151,2024-12-23,Atención digital,Día,Sup. G,64.5,3.5,day,fixed,true
+SYN-00152,2026-08-03,Soporte técnico,Tarde,Sup. H,81.9,1.4,evening,fixed,true
+SYN-00153,2024-12-15,Soporte técnico,Día,Sup. A,62.2,2.2,day,flexible,true
+SYN-00154,2026-06-11,Ventas,Noche,Sup. B,55.9,1.9,night,fixed,true
+SYN-00155,2025-06-06,Atención digital,Día,Sup. C,87.7,1.9,day,fixed,true
+SYN-00156,2026-08-15,Soporte técnico,Día,Sup. D,79.3,1.5,day,fixed,true
+SYN-00157,2025-12-20,Ventas,Noche,Sup. E,66.6,3.6,night,fixed,true
+SYN-00158,2025-11-13,Retención,Noche,Sup. F,57.7,0.6,night,flexible,true
+SYN-00159,2026-06-21,Retención,Noche,Sup. G,80.4,3.0,night,fixed,true
+SYN-00160,2025-07-29,Ventas,Noche,Sup. H,64.4,2.3,night,fixed,true
+SYN-00161,2026-06-04,Atención digital,Tarde,Sup. A,66.1,1.9,evening,flexible,true
+SYN-00162,2025-02-22,Atención digital,Tarde,Sup. B,86.2,3.5,evening,fixed,true
+SYN-00163,2025-07-03,Retención,Día,Sup. C,82.7,2.2,day,flexible,true
+SYN-00164,2025-05-03,Soporte técnico,Tarde,Sup. D,74.1,0.0,evening,flexible,true
+SYN-00165,2026-09-30,Atención digital,Tarde,Sup. E,77.5,2.8,evening,flexible,true
+SYN-00166,2026-03-01,Ventas,Día,Sup. F,81.0,3.8,day,fixed,true
+SYN-00167,2026-10-09,Atención digital,Día,Sup. G,79.2,1.6,day,flexible,true
+SYN-00168,2026-03-21,Retención,Día,Sup. H,78.7,1.6,day,fixed,true
+SYN-00169,2025-07-02,Atención digital,Tarde,Sup. A,84.8,0.0,evening,flexible,true
+SYN-00170,2025-05-27,Retención,Día,Sup. B,77.8,1.4,day,fixed,true
+SYN-00171,2026-09-02,Retención,Tarde,Sup. C,67.8,1.9,evening,fixed,true
+SYN-00172,2024-10-28,Retención,Día,Sup. D,58.5,5.1,day,flexible,true
+SYN-00173,2024-08-18,Ventas,Día,Sup. E,49.5,3.8,day,fixed,true
+SYN-00174,2025-12-23,Atención digital,Día,Sup. F,85.2,1.3,day,flexible,true
+SYN-00175,2025-02-09,Atención digital,Tarde,Sup. G,79.4,4.5,evening,fixed,true
+SYN-00176,2025-09-11,Retención,Tarde,Sup. H,60.7,5.5,evening,flexible,true
+SYN-00177,2026-02-27,Soporte técnico,Noche,Sup. A,68.0,2.3,night,flexible,true
+SYN-00178,2026-06-24,Soporte técnico,Tarde,Sup. B,79.2,2.6,evening,fixed,true
+SYN-00179,2025-10-01,Ventas,Tarde,Sup. C,63.6,2.3,evening,flexible,true
+SYN-00180,2026-07-15,Atención digital,Día,Sup. D,84.8,0.0,day,flexible,true
+SYN-00181,2025-12-12,Ventas,Tarde,Sup. E,86.4,1.6,evening,flexible,true
+SYN-00182,2025-11-21,Soporte técnico,Día,Sup. F,56.5,,day,flexible,true
+SYN-00183,2026-07-14,Atención digital,Día,Sup. G,80.3,0.0,day,fixed,true
+SYN-00184,2026-05-31,Retención,Día,Sup. H,61.7,4.6,day,flexible,true
+SYN-00185,2025-04-20,Retención,Día,Sup. A,70.2,1.0,day,fixed,true
+SYN-00186,2025-06-28,Atención digital,Noche,Sup. B,88.2,3.6,night,flexible,true
+SYN-00187,2025-10-08,Ventas,Día,Sup. C,70.6,0.7,day,fixed,true
+SYN-00188,2024-04-07,Ventas,Tarde,Sup. D,67.2,2.1,evening,flexible,true
+SYN-00189,2026-08-28,Retención,Día,Sup. E,69.4,2.4,day,fixed,true
+SYN-00190,2026-02-15,Ventas,Tarde,Sup. F,63.0,0.0,evening,flexible,true
+SYN-00191,2025-12-20,Atención digital,Tarde,Sup. G,56.8,0.0,evening,fixed,true
+SYN-00192,2024-01-22,Ventas,Noche,Sup. H,66.3,0.0,night,flexible,true
+SYN-00193,2025-06-04,Ventas,Noche,Sup. A,59.1,0.0,night,fixed,true
+SYN-00194,2025-11-22,Retención,Noche,Sup. B,70.2,1.2,night,flexible,true
+SYN-00195,2025-08-18,Atención digital,Tarde,Sup. C,38.0,4.8,evening,flexible,true
+SYN-00196,2025-09-26,Retención,Día,Sup. D,80.3,1.9,day,fixed,true
+SYN-00197,2026-08-31,Ventas,Día,Sup. E,57.3,0.0,day,fixed,true
+SYN-00198,2025-03-15,Ventas,Tarde,Sup. F,41.4,0.0,evening,fixed,true
+SYN-00199,2025-06-25,Ventas,Noche,Sup. G,39.3,0.5,night,fixed,true
+SYN-00200,2025-06-05,Ventas,Noche,Sup. H,79.6,1.6,night,flexible,true
+SYN-00201,2026-07-20,Soporte técnico,Tarde,Sup. A,74.5,2.6,evening,flexible,true
+SYN-00202,2024-03-06,Retención,Día,Sup. B,100.0,0.0,day,fixed,true
+SYN-00203,2026-04-30,Atención digital,Día,Sup. C,72.5,0.0,day,fixed,true
+SYN-00204,2025-01-10,Soporte técnico,Día,Sup. D,82.0,0.0,day,flexible,true
+SYN-00205,2024-07-25,Retención,Tarde,Sup. E,88.7,4.2,evening,fixed,true
+SYN-00206,2024-03-03,Soporte técnico,Tarde,Sup. F,59.6,3.1,evening,fixed,true
+SYN-00207,2024-01-24,Retención,Día,Sup. G,66.6,1.3,day,flexible,true
+SYN-00208,2025-09-16,Atención digital,Día,Sup. H,67.8,3.5,day,flexible,true
+SYN-00209,2025-09-23,Retención,Noche,Sup. A,72.4,0.0,night,flexible,true
+SYN-00210,2025-09-27,Ventas,Tarde,Sup. B,,0.8,evening,fixed,true
+SYN-00211,2025-01-11,Retención,Noche,Sup. C,75.1,0.0,night,flexible,true
+SYN-00212,2025-11-01,Soporte técnico,Día,Sup. D,86.0,2.2,day,flexible,true
+SYN-00213,2024-01-08,Retención,Noche,Sup. E,62.8,3.2,night,flexible,true
+SYN-00214,2026-01-02,Soporte técnico,Tarde,Sup. F,73.9,2.7,evening,flexible,true
+SYN-00215,2024-02-16,Retención,Noche,Sup. G,,0.8,night,flexible,true
+SYN-00216,2026-01-03,Ventas,Tarde,Sup. H,60.1,0.4,evening,flexible,true
+SYN-00217,2026-07-23,Soporte técnico,Día,Sup. A,,1.1,day,flexible,true
+SYN-00218,2026-09-08,Soporte técnico,Tarde,Sup. B,66.6,2.0,evening,flexible,true
+SYN-00219,2024-04-15,Soporte técnico,Tarde,Sup. C,84.5,1.2,evening,flexible,true
+SYN-00220,2025-09-03,Soporte técnico,Noche,Sup. D,84.5,2.5,night,fixed,true
+SYN-00221,2024-07-04,Retención,Noche,Sup. E,,0.0,night,flexible,true
+SYN-00222,2025-12-09,Ventas,Día,Sup. F,70.7,1.7,day,flexible,true
+SYN-00223,2024-08-11,Soporte técnico,Noche,Sup. G,58.6,1.4,night,flexible,true
+SYN-00224,2024-12-29,Atención digital,Día,Sup. H,68.4,0.0,day,flexible,true
+SYN-00225,2024-05-02,Atención digital,Tarde,Sup. A,70.8,0.3,evening,fixed,true
+SYN-00226,2025-11-09,Atención digital,Tarde,Sup. B,62.0,0.0,evening,fixed,true
+SYN-00227,2024-03-24,Soporte técnico,Noche,Sup. C,83.9,0.0,night,flexible,true
+SYN-00228,2026-06-26,Soporte técnico,Tarde,Sup. D,82.6,0.0,evening,flexible,true
+SYN-00229,2026-03-28,Retención,Noche,Sup. E,71.7,0.0,night,fixed,true
+SYN-00230,2026-01-25,Atención digital,Noche,Sup. F,91.3,1.9,night,flexible,true
+SYN-00231,2025-01-06,Soporte técnico,Día,Sup. G,86.4,1.5,day,fixed,true
+SYN-00232,2024-08-05,Retención,Tarde,Sup. H,78.1,0.2,evening,fixed,true
+SYN-00233,2026-05-20,Ventas,Día,Sup. A,100.0,6.7,day,flexible,true
+SYN-00234,2026-01-13,Soporte técnico,Noche,Sup. B,77.0,1.0,night,flexible,true
+SYN-00235,2026-07-23,Atención digital,Día,Sup. C,66.3,3.4,day,fixed,true
+SYN-00236,2024-12-29,Atención digital,Día,Sup. D,,1.6,day,fixed,true
+SYN-00237,2025-10-13,Ventas,Noche,Sup. E,95.0,3.1,night,flexible,true
+SYN-00238,2026-10-13,Retención,Noche,Sup. F,72.3,2.6,night,flexible,true
+SYN-00239,2025-04-08,Atención digital,Día,Sup. G,68.4,0.3,day,fixed,true
+SYN-00240,2024-01-22,Retención,Tarde,Sup. H,62.6,1.2,evening,flexible,true
+SYN-00241,2026-05-16,Ventas,Día,Sup. A,75.2,0.0,day,flexible,true
+SYN-00242,2024-01-23,Soporte técnico,Tarde,Sup. B,,0.0,evening,fixed,true
+SYN-00243,2025-09-23,Atención digital,Tarde,Sup. C,95.7,1.6,evening,flexible,true
+SYN-00244,2024-03-14,Soporte técnico,Día,Sup. D,69.7,4.7,day,fixed,true
+SYN-00245,2024-08-21,Ventas,Tarde,Sup. E,87.3,1.4,evening,flexible,true
+SYN-00246,2025-09-11,Soporte técnico,Tarde,Sup. F,89.0,0.0,evening,fixed,true
+SYN-00247,2024-02-19,Retención,Noche,Sup. G,76.1,3.6,night,flexible,true
+SYN-00248,2024-01-13,Atención digital,Tarde,Sup. H,58.5,0.6,evening,fixed,true
+SYN-00249,2025-04-25,Ventas,Día,Sup. A,69.2,4.0,day,flexible,true
+SYN-00250,2024-09-28,Atención digital,Tarde,Sup. B,73.0,2.3,evening,fixed,true
+SYN-00251,2024-11-13,Atención digital,Noche,Sup. C,56.8,0.0,night,flexible,true
+SYN-00252,2025-03-18,Ventas,Tarde,Sup. D,74.4,0.0,evening,fixed,true
+SYN-00253,2025-03-20,Atención digital,Tarde,Sup. E,72.8,5.8,evening,flexible,true
+SYN-00254,2026-07-01,Atención digital,Tarde,Sup. F,80.3,0.5,evening,fixed,true
+SYN-00255,2025-02-28,Soporte técnico,Día,Sup. G,52.3,2.5,day,fixed,true
+SYN-00256,2026-09-12,Atención digital,Tarde,Sup. H,62.6,0.0,evening,fixed,true
+SYN-00257,2024-07-24,Atención digital,Día,Sup. A,69.7,0.8,day,fixed,true
+SYN-00258,2025-01-05,Retención,Tarde,Sup. B,70.4,0.1,evening,flexible,true
+SYN-00259,2025-04-10,Soporte técnico,Tarde,Sup. C,74.1,1.9,evening,flexible,true
+SYN-00260,2026-05-30,Atención digital,Tarde,Sup. D,,0.0,evening,flexible,true
+SYN-00261,2025-03-26,Ventas,Día,Sup. E,60.3,2.9,day,flexible,true
+SYN-00262,2025-02-14,Atención digital,Tarde,Sup. F,67.0,2.0,evening,fixed,true
+SYN-00263,2025-10-27,Retención,Noche,Sup. G,77.3,1.7,night,flexible,true
+SYN-00264,2026-05-06,Ventas,Día,Sup. H,94.1,1.6,day,flexible,true
+SYN-00265,2025-06-27,Soporte técnico,Día,Sup. A,74.2,2.2,day,flexible,true
+SYN-00266,2024-05-19,Retención,Tarde,Sup. B,86.3,0.0,evening,fixed,true
+SYN-00267,2026-04-01,Ventas,Día,Sup. C,65.5,0.8,day,fixed,true
+SYN-00268,2024-07-27,Atención digital,Día,Sup. D,91.3,0.0,day,flexible,true
+SYN-00269,2026-08-18,Ventas,Tarde,Sup. E,61.5,3.1,evening,fixed,true
+SYN-00270,2026-03-08,Atención digital,Día,Sup. F,86.8,0.0,day,flexible,true
+SYN-00271,2026-08-21,Atención digital,Tarde,Sup. G,69.5,4.0,evening,fixed,true
+SYN-00272,2026-09-02,Atención digital,Noche,Sup. H,81.3,0.8,night,flexible,true
+SYN-00273,2024-06-27,Soporte técnico,Tarde,Sup. A,78.2,2.9,evening,flexible,true
+SYN-00274,2025-03-29,Ventas,Tarde,Sup. B,81.7,1.3,evening,fixed,true
+SYN-00275,2026-05-22,Soporte técnico,Tarde,Sup. C,88.5,0.4,evening,fixed,true
+SYN-00276,2024-03-12,Atención digital,Tarde,Sup. D,63.9,0.0,evening,flexible,true
+SYN-00277,2025-08-09,Soporte técnico,Tarde,Sup. E,69.5,4.4,evening,flexible,true
+SYN-00278,2025-06-18,Retención,Día,Sup. F,57.3,1.3,day,fixed,true
+SYN-00279,2026-07-02,Atención digital,Tarde,Sup. G,61.2,0.2,evening,flexible,true
+SYN-00280,2026-02-14,Ventas,Noche,Sup. H,50.2,1.4,night,flexible,true
+SYN-00281,2024-12-07,Atención digital,Día,Sup. A,74.8,1.7,day,flexible,true
+SYN-00282,2024-03-14,Ventas,Noche,Sup. B,80.5,0.3,night,fixed,true
+SYN-00283,2026-01-17,Soporte técnico,Día,Sup. C,48.6,2.3,day,flexible,true
+SYN-00284,2026-08-08,Soporte técnico,Tarde,Sup. D,60.2,0.3,evening,flexible,true
+SYN-00285,2025-09-28,Soporte técnico,Tarde,Sup. E,62.5,3.4,evening,fixed,true
+SYN-00286,2026-01-13,Ventas,Noche,Sup. F,93.6,0.0,night,flexible,true
+SYN-00287,2026-07-21,Soporte técnico,Día,Sup. G,74.9,1.3,day,fixed,true
+SYN-00288,2024-07-02,Ventas,Tarde,Sup. H,64.3,3.1,evening,flexible,true
+SYN-00289,2025-11-30,Atención digital,Día,Sup. A,56.4,2.0,day,flexible,true
+SYN-00290,2025-09-20,Ventas,Día,Sup. B,54.9,1.4,day,flexible,true
+SYN-00291,2024-11-17,Retención,Día,Sup. C,67.4,1.3,day,fixed,true
+SYN-00292,2025-03-26,Retención,Tarde,Sup. D,64.7,1.5,evening,flexible,true
+SYN-00293,2024-11-26,Atención digital,Día,Sup. E,79.1,2.9,day,flexible,true
+SYN-00294,2024-03-22,Soporte técnico,Noche,Sup. F,80.3,1.1,night,fixed,true
+SYN-00295,2025-09-13,Soporte técnico,Día,Sup. G,81.2,0.7,day,flexible,true
+SYN-00296,2024-05-02,Soporte técnico,Día,Sup. H,,2.4,day,fixed,true
+SYN-00297,2026-07-13,Atención digital,Día,Sup. A,66.5,2.5,day,fixed,true
+SYN-00298,2025-07-11,Atención digital,Día,Sup. B,79.2,0.0,day,flexible,true
+SYN-00299,2024-08-24,Ventas,Tarde,Sup. C,78.6,0.0,evening,flexible,true
+SYN-00300,2026-07-07,Atención digital,Día,Sup. D,95.3,0.0,day,fixed,true
+SYN-00301,2025-11-07,Ventas,Día,Sup. E,70.3,0.0,day,flexible,true
+SYN-00302,2024-08-05,Soporte técnico,Noche,Sup. F,91.3,2.9,night,flexible,true
+SYN-00303,2026-02-06,Retención,Tarde,Sup. G,76.0,5.0,evening,flexible,true
+SYN-00304,2025-12-19,Retención,Noche,Sup. H,92.4,1.6,night,fixed,true
+SYN-00305,2025-06-10,Retención,Noche,Sup. A,76.7,0.2,night,fixed,true
+SYN-00306,2024-01-30,Atención digital,Noche,Sup. B,80.5,3.0,night,flexible,true
+SYN-00307,2025-05-22,Soporte técnico,Día,Sup. C,69.0,1.8,day,fixed,true
+SYN-00308,2026-10-12,Soporte técnico,Día,Sup. D,86.9,0.0,day,flexible,true
+SYN-00309,2025-06-07,Atención digital,Tarde,Sup. E,67.8,4.0,evening,flexible,true
+SYN-00310,2025-05-31,Retención,Día,Sup. F,74.0,0.0,day,flexible,true
+SYN-00311,2026-01-11,Soporte técnico,Noche,Sup. G,68.6,2.7,night,flexible,true
+SYN-00312,2025-04-18,Retención,Día,Sup. H,87.6,0.2,day,fixed,true
+SYN-00313,2025-04-28,Ventas,Noche,Sup. A,58.8,0.0,night,flexible,true
+SYN-00314,2025-07-31,Soporte técnico,Tarde,Sup. B,76.8,2.2,evening,fixed,true
+SYN-00315,2026-07-02,Ventas,Día,Sup. C,64.5,0.5,day,fixed,true
+SYN-00316,2025-12-08,Soporte técnico,Día,Sup. D,,1.6,day,flexible,true
+SYN-00317,2026-01-27,Ventas,Noche,Sup. E,71.0,1.1,night,fixed,true
+SYN-00318,2024-10-09,Retención,Día,Sup. F,74.5,0.0,day,fixed,true
+SYN-00319,2026-03-19,Retención,Tarde,Sup. G,75.0,0.8,evening,flexible,true
+SYN-00320,2025-10-15,Retención,Tarde,Sup. H,77.2,2.3,evening,fixed,true
+SYN-00321,2025-03-31,Soporte técnico,Noche,Sup. A,72.0,1.2,night,flexible,true
+SYN-00322,2025-08-03,Ventas,Día,Sup. B,56.4,0.0,day,flexible,true
+SYN-00323,2024-02-24,Soporte técnico,Tarde,Sup. C,61.4,4.9,evening,fixed,true
+SYN-00324,2026-04-04,Atención digital,Noche,Sup. D,,1.6,night,flexible,true
+SYN-00325,2026-04-04,Soporte técnico,Tarde,Sup. E,78.5,0.7,evening,fixed,true
+SYN-00326,2024-03-21,Retención,Tarde,Sup. F,59.8,0.7,evening,flexible,true
+SYN-00327,2026-02-05,Retención,Día,Sup. G,94.0,1.8,day,fixed,true
+SYN-00328,2025-04-05,Ventas,Día,Sup. H,69.3,4.4,day,fixed,true
+SYN-00329,2025-09-16,Ventas,Día,Sup. A,59.9,2.3,day,flexible,true
+SYN-00330,2024-09-26,Soporte técnico,Día,Sup. B,57.8,0.0,day,flexible,true
+SYN-00331,2024-03-22,Ventas,Noche,Sup. C,51.4,0.3,night,flexible,true
+SYN-00332,2024-08-17,Atención digital,Tarde,Sup. D,91.1,0.3,evening,fixed,true
+SYN-00333,2024-07-17,Atención digital,Tarde,Sup. E,71.8,0.0,evening,flexible,true
+SYN-00334,2025-04-10,Ventas,Tarde,Sup. F,74.9,1.6,evening,fixed,true
+SYN-00335,2026-06-10,Retención,Día,Sup. G,90.7,1.6,day,flexible,true
+SYN-00336,2024-11-29,Atención digital,Noche,Sup. H,51.6,0.8,night,fixed,true
+SYN-00337,2026-06-02,Retención,Noche,Sup. A,84.0,3.5,night,flexible,true
+SYN-00338,2024-08-14,Ventas,Día,Sup. B,88.1,0.0,day,fixed,true
+SYN-00339,2024-09-09,Atención digital,Día,Sup. C,74.7,0.3,day,fixed,true
+SYN-00340,2024-07-08,Retención,Noche,Sup. D,78.8,2.1,night,fixed,true
+SYN-00341,2024-01-10,Atención digital,Día,Sup. E,49.2,2.7,day,flexible,true
+SYN-00342,2024-06-02,Atención digital,Noche,Sup. F,70.3,1.5,night,flexible,true
+SYN-00343,2026-05-18,Ventas,Tarde,Sup. G,71.6,0.0,evening,flexible,true
+SYN-00344,2024-07-22,Ventas,Día,Sup. H,54.6,1.3,day,flexible,true
+SYN-00345,2026-04-10,Atención digital,Día,Sup. A,69.2,2.5,day,flexible,true
+SYN-00346,2025-06-19,Atención digital,Día,Sup. B,52.2,0.7,day,flexible,true
+SYN-00347,2025-07-21,Atención digital,Tarde,Sup. C,82.5,0.9,evening,fixed,true
+SYN-00348,2024-05-03,Ventas,Día,Sup. D,61.3,0.0,day,fixed,true
+SYN-00349,2024-12-29,Ventas,Día,Sup. E,82.0,0.0,day,flexible,true
+SYN-00350,2024-02-18,Atención digital,Día,Sup. F,66.9,0.0,day,flexible,true
+SYN-00351,2026-03-10,Ventas,Día,Sup. G,97.5,1.7,day,fixed,true
+SYN-00352,2024-06-23,Retención,Día,Sup. H,68.9,0.0,day,fixed,true
+SYN-00353,2025-06-11,Atención digital,Tarde,Sup. A,71.2,1.6,evening,flexible,true
+SYN-00354,2025-09-29,Soporte técnico,Tarde,Sup. B,62.1,0.0,evening,fixed,true
+SYN-00355,2025-01-27,Atención digital,Día,Sup. C,62.8,3.5,day,flexible,true
+SYN-00356,2025-08-28,Atención digital,Tarde,Sup. D,76.6,0.3,evening,fixed,true
+SYN-00357,2024-02-16,Atención digital,Noche,Sup. E,75.2,1.7,night,flexible,true
+SYN-00358,2024-12-31,Ventas,Noche,Sup. F,72.4,2.2,night,fixed,true
+SYN-00359,2024-04-02,Soporte técnico,Tarde,Sup. G,69.3,1.3,evening,flexible,true
+SYN-00360,2024-11-28,Soporte técnico,Noche,Sup. H,67.1,3.0,night,flexible,true
+SYN-00361,2024-05-06,Ventas,Día,Sup. A,65.1,0.0,day,fixed,true
+SYN-00362,2026-08-08,Soporte técnico,Día,Sup. B,71.7,3.7,day,fixed,true
+SYN-00363,2026-09-26,Soporte técnico,Día,Sup. C,85.1,2.2,day,fixed,true
+SYN-00364,2025-04-21,Atención digital,Día,Sup. D,57.8,,day,flexible,true
+SYN-00365,2026-08-18,Ventas,Noche,Sup. E,59.6,1.4,night,flexible,true
+SYN-00366,2025-04-28,Soporte técnico,Día,Sup. F,81.9,4.4,day,flexible,true
+SYN-00367,2025-06-30,Soporte técnico,Tarde,Sup. G,66.4,0.0,evening,fixed,true
+SYN-00368,2025-02-14,Atención digital,Tarde,Sup. H,75.4,0.0,evening,fixed,true
+SYN-00369,2026-03-09,Retención,Tarde,Sup. A,68.2,2.5,evening,flexible,true
+SYN-00370,2026-10-09,Atención digital,Noche,Sup. B,71.1,1.9,night,flexible,true
+SYN-00371,2025-08-11,Retención,Noche,Sup. C,81.9,0.0,night,flexible,true
+SYN-00372,2024-02-26,Atención digital,Tarde,Sup. D,92.8,1.4,evening,flexible,true
+SYN-00373,2025-03-02,Ventas,Día,Sup. E,66.0,0.0,day,fixed,true
+SYN-00374,2024-02-04,Soporte técnico,Día,Sup. F,81.0,,day,fixed,true
+SYN-00375,2025-12-01,Soporte técnico,Día,Sup. G,97.0,0.1,day,flexible,true
+SYN-00376,2025-08-27,Soporte técnico,Día,Sup. H,65.9,0.0,day,fixed,true
+SYN-00377,2025-11-06,Ventas,Día,Sup. A,62.6,0.5,day,fixed,true
+SYN-00378,2026-09-05,Retención,Noche,Sup. B,44.3,0.0,night,flexible,true
+SYN-00379,2026-05-30,Retención,Tarde,Sup. C,81.1,2.2,evening,flexible,true
+SYN-00380,2024-04-07,Retención,Tarde,Sup. D,84.5,2.0,evening,flexible,true
+SYN-00381,2026-09-05,Retención,Día,Sup. E,,2.7,day,fixed,true
+SYN-00382,2026-03-18,Atención digital,Noche,Sup. F,62.5,2.3,night,flexible,true
+SYN-00383,2025-02-20,Retención,Día,Sup. G,78.8,1.0,day,flexible,true
+SYN-00384,2025-06-19,Soporte técnico,Noche,Sup. H,83.3,2.1,night,fixed,true
+SYN-00385,2025-03-23,Soporte técnico,Tarde,Sup. A,75.5,0.0,evening,fixed,true
+SYN-00386,2025-03-07,Soporte técnico,Día,Sup. B,69.1,2.1,day,flexible,true
+SYN-00387,2025-06-25,Soporte técnico,Día,Sup. C,96.3,0.0,day,fixed,true
+SYN-00388,2025-08-08,Retención,Tarde,Sup. D,86.3,3.3,evening,fixed,true
+SYN-00389,2025-02-28,Ventas,Noche,Sup. E,79.7,,night,flexible,true
+SYN-00390,2025-03-07,Retención,Tarde,Sup. F,71.0,0.6,evening,fixed,true
+SYN-00391,2024-05-13,Soporte técnico,Día,Sup. G,,1.0,day,flexible,true
+SYN-00392,2026-02-28,Atención digital,Noche,Sup. H,64.4,1.5,night,flexible,true
+SYN-00393,2025-07-09,Retención,Noche,Sup. A,74.7,0.2,night,fixed,true
+SYN-00394,2026-04-29,Soporte técnico,Día,Sup. B,89.0,2.9,day,fixed,true
+SYN-00395,2025-06-21,Atención digital,Tarde,Sup. C,71.4,0.0,evening,flexible,true
+SYN-00396,2025-11-15,Retención,Día,Sup. D,66.4,0.0,day,fixed,true
+SYN-00397,2026-08-30,Soporte técnico,Noche,Sup. E,,0.2,night,fixed,true
+SYN-00398,2024-06-12,Retención,Noche,Sup. F,66.3,2.4,night,fixed,true
+SYN-00399,2026-08-18,Atención digital,Día,Sup. G,43.7,0.9,day,fixed,true
+SYN-00400,2024-09-17,Atención digital,Noche,Sup. H,61.3,3.0,night,fixed,true
+SYN-00401,2025-05-26,Atención digital,Día,Sup. A,85.6,0.0,day,fixed,true
+SYN-00402,2024-07-09,Soporte técnico,Tarde,Sup. B,87.3,4.5,evening,flexible,true
+SYN-00403,2026-04-23,Retención,Día,Sup. C,77.3,1.0,day,flexible,true
+SYN-00404,2025-04-09,Ventas,Tarde,Sup. D,71.5,0.1,evening,flexible,true
+SYN-00405,2025-12-17,Soporte técnico,Noche,Sup. E,69.9,3.5,night,flexible,true
+SYN-00406,2025-03-04,Soporte técnico,Noche,Sup. F,88.3,1.6,night,fixed,true
+SYN-00407,2024-06-23,Atención digital,Día,Sup. G,54.0,0.0,day,flexible,true
+SYN-00408,2024-11-20,Ventas,Tarde,Sup. H,91.7,0.8,evening,flexible,true
+SYN-00409,2024-05-19,Retención,Día,Sup. A,49.2,5.0,day,flexible,true
+SYN-00410,2024-06-12,Ventas,Tarde,Sup. B,88.0,0.7,evening,flexible,true
+SYN-00411,2024-04-05,Soporte técnico,Tarde,Sup. C,63.7,1.3,evening,fixed,true
+SYN-00412,2024-02-27,Atención digital,Día,Sup. D,92.6,1.0,day,fixed,true
+SYN-00413,2024-01-21,Soporte técnico,Noche,Sup. E,95.4,0.0,night,fixed,true
+SYN-00414,2026-06-25,Ventas,Día,Sup. F,60.7,2.4,day,flexible,true
+SYN-00415,2025-02-25,Atención digital,Día,Sup. G,72.8,,day,fixed,true
+SYN-00416,2026-07-18,Soporte técnico,Día,Sup. H,69.1,2.8,day,flexible,true
+SYN-00417,2024-09-21,Atención digital,Día,Sup. A,70.4,1.3,day,flexible,true
+SYN-00418,2024-02-06,Retención,Tarde,Sup. B,82.8,0.0,evening,flexible,true
+SYN-00419,2025-11-27,Soporte técnico,Tarde,Sup. C,78.8,2.6,evening,flexible,true
+SYN-00420,2024-11-05,Retención,Noche,Sup. D,69.5,0.0,night,flexible,true
+SYN-00421,2024-12-20,Soporte técnico,Tarde,Sup. E,81.9,3.0,evening,flexible,true
+SYN-00422,2024-12-26,Atención digital,Día,Sup. F,58.4,0.5,day,fixed,true
+SYN-00423,2024-04-07,Soporte técnico,Día,Sup. G,,6.3,day,flexible,true
+SYN-00424,2025-08-21,Soporte técnico,Tarde,Sup. H,80.1,0.0,evening,flexible,true
+SYN-00425,2024-03-07,Soporte técnico,Noche,Sup. A,100.0,0.4,night,flexible,true
+SYN-00426,2025-07-20,Soporte técnico,Día,Sup. B,100.0,0.0,day,flexible,true
+SYN-00427,2025-04-09,Soporte técnico,Tarde,Sup. C,89.7,0.8,evening,fixed,true
+SYN-00428,2024-09-16,Ventas,Día,Sup. D,80.1,1.8,day,flexible,true
+SYN-00429,2024-01-17,Ventas,Noche,Sup. E,72.5,0.7,night,flexible,true
+SYN-00430,2026-03-04,Soporte técnico,Tarde,Sup. F,79.3,0.0,evening,fixed,true
+SYN-00431,2025-11-10,Atención digital,Día,Sup. G,78.8,0.7,day,fixed,true
+SYN-00432,2024-08-14,Atención digital,Tarde,Sup. H,65.9,3.3,evening,fixed,true
+SYN-00433,2026-09-26,Retención,Día,Sup. A,89.2,2.1,day,flexible,true
+SYN-00434,2025-09-21,Soporte técnico,Noche,Sup. B,77.1,0.0,night,flexible,true
+SYN-00435,2025-06-24,Soporte técnico,Tarde,Sup. C,68.4,2.1,evening,fixed,true
+SYN-00436,2025-10-28,Retención,Día,Sup. D,76.1,0.6,day,flexible,true
+SYN-00437,2025-08-26,Soporte técnico,Día,Sup. E,81.8,0.1,day,fixed,true
+SYN-00438,2025-05-13,Ventas,Noche,Sup. F,73.6,4.2,night,fixed,true
+SYN-00439,2024-04-03,Retención,Día,Sup. G,77.0,3.6,day,flexible,true
+SYN-00440,2026-05-22,Atención digital,Día,Sup. H,74.3,0.9,day,fixed,true
+SYN-00441,2024-07-10,Soporte técnico,Día,Sup. A,67.0,0.0,day,flexible,true
+SYN-00442,2024-05-27,Ventas,Día,Sup. B,58.7,1.3,day,flexible,true
+SYN-00443,2026-06-10,Retención,Tarde,Sup. C,98.3,0.5,evening,fixed,true
+SYN-00444,2026-03-30,Retención,Día,Sup. D,77.9,0.3,day,fixed,true
+SYN-00445,2025-01-26,Retención,Día,Sup. E,74.4,1.6,day,flexible,true
+SYN-00446,2025-02-13,Soporte técnico,Tarde,Sup. F,66.9,2.8,evening,flexible,true
+SYN-00447,2026-05-19,Ventas,Día,Sup. G,66.9,1.5,day,flexible,true
+SYN-00448,2025-02-03,Atención digital,Día,Sup. H,67.9,0.7,day,flexible,true
+SYN-00449,2024-09-15,Atención digital,Tarde,Sup. A,96.2,0.8,evening,flexible,true
+SYN-00450,2026-05-18,Retención,Día,Sup. B,52.9,0.0,day,flexible,true
+SYN-00451,2026-10-15,Soporte técnico,Día,Sup. C,63.1,3.5,day,flexible,true
+SYN-00452,2026-03-20,Ventas,Tarde,Sup. D,85.7,0.0,evening,fixed,true
+SYN-00453,2024-07-16,Soporte técnico,Día,Sup. E,76.8,,day,fixed,true
+SYN-00454,2026-09-13,Soporte técnico,Tarde,Sup. F,78.5,0.4,evening,flexible,true
+SYN-00455,2026-04-07,Soporte técnico,Noche,Sup. G,75.6,3.4,night,fixed,true
+SYN-00456,2026-02-09,Ventas,Noche,Sup. H,68.4,0.0,night,fixed,true
+SYN-00457,2024-04-19,Atención digital,Día,Sup. A,74.4,2.8,day,fixed,true
+SYN-00458,2025-03-27,Retención,Noche,Sup. B,85.6,0.7,night,flexible,true
+SYN-00459,2024-02-23,Soporte técnico,Noche,Sup. C,69.0,,night,flexible,true
+SYN-00460,2026-03-26,Atención digital,Tarde,Sup. D,72.0,2.9,evening,fixed,true
+SYN-00461,2026-04-15,Atención digital,Tarde,Sup. E,56.7,2.6,evening,flexible,true
+SYN-00462,2024-12-17,Atención digital,Día,Sup. F,,1.5,day,fixed,true
+SYN-00463,2024-04-19,Ventas,Día,Sup. G,88.5,3.6,day,flexible,true
+SYN-00464,2026-09-05,Ventas,Día,Sup. H,61.0,2.6,day,fixed,true
+SYN-00465,2025-06-18,Soporte técnico,Noche,Sup. A,76.9,0.0,night,fixed,true
+SYN-00466,2024-03-22,Soporte técnico,Día,Sup. B,75.8,0.9,day,flexible,true
+SYN-00467,2025-10-27,Ventas,Tarde,Sup. C,59.1,1.4,evening,flexible,true
+SYN-00468,2024-09-04,Retención,Tarde,Sup. D,59.9,1.8,evening,flexible,true
+SYN-00469,2024-10-22,Soporte técnico,Noche,Sup. E,69.1,1.8,night,fixed,true
+SYN-00470,2025-05-23,Soporte técnico,Día,Sup. F,70.2,2.0,day,fixed,true
+SYN-00471,2025-10-16,Retención,Día,Sup. G,64.5,0.0,day,fixed,true
+SYN-00472,2025-02-20,Retención,Día,Sup. H,,0.0,day,flexible,true
+SYN-00473,2026-03-19,Ventas,Tarde,Sup. A,62.5,0.0,evening,flexible,true
+SYN-00474,2024-07-27,Retención,Noche,Sup. B,77.9,2.0,night,flexible,true
+SYN-00475,2026-01-30,Ventas,Tarde,Sup. C,94.9,0.0,evening,fixed,true
+SYN-00476,2025-12-31,Ventas,Tarde,Sup. D,,2.8,evening,flexible,true
+SYN-00477,2025-12-01,Soporte técnico,Tarde,Sup. E,82.7,1.7,evening,flexible,true
+SYN-00478,2025-07-19,Ventas,Noche,Sup. F,70.5,0.0,night,fixed,true
+SYN-00479,2025-01-02,Retención,Tarde,Sup. G,82.5,0.0,evening,fixed,true
+SYN-00480,2024-08-18,Retención,Tarde,Sup. H,81.0,2.2,evening,flexible,true
+SYN-00481,2024-11-15,Soporte técnico,Día,Sup. A,,3.4,day,fixed,true
+SYN-00482,2025-12-06,Atención digital,Noche,Sup. B,80.4,4.6,night,fixed,true
+SYN-00483,2025-02-05,Atención digital,Día,Sup. C,62.5,0.7,day,flexible,true
+SYN-00484,2026-02-28,Atención digital,Noche,Sup. D,64.8,0.0,night,flexible,true
+SYN-00485,2025-11-22,Retención,Noche,Sup. E,81.7,0.8,night,flexible,true
+SYN-00486,2024-12-30,Soporte técnico,Día,Sup. F,79.1,5.2,day,fixed,true
+SYN-00487,2024-02-27,Soporte técnico,Tarde,Sup. G,89.6,0.1,evening,flexible,true
+SYN-00488,2024-05-10,Atención digital,Noche,Sup. H,74.3,4.5,night,fixed,true
+SYN-00489,2025-10-12,Soporte técnico,Noche,Sup. A,52.8,1.1,night,flexible,true
+SYN-00490,2026-05-31,Retención,Día,Sup. B,74.0,0.2,day,flexible,true
+SYN-00491,2026-05-12,Atención digital,Día,Sup. C,80.7,0.0,day,fixed,true
+SYN-00492,2025-04-28,Atención digital,Tarde,Sup. D,80.2,0.9,evening,flexible,true
+SYN-00493,2026-10-01,Ventas,Noche,Sup. E,97.0,1.8,night,fixed,true
+SYN-00494,2026-09-22,Retención,Noche,Sup. F,85.3,2.7,night,fixed,true
+SYN-00495,2024-08-11,Soporte técnico,Tarde,Sup. G,77.0,3.7,evening,flexible,true
+SYN-00496,2026-03-22,Retención,Día,Sup. H,55.6,2.6,day,fixed,true
+SYN-00497,2024-06-15,Atención digital,Día,Sup. A,65.9,0.0,day,flexible,true
+SYN-00498,2025-10-28,Soporte técnico,Día,Sup. B,73.0,3.2,day,fixed,true
+SYN-00499,2026-04-28,Soporte técnico,Tarde,Sup. C,,2.0,evening,fixed,true
+SYN-00500,2026-08-24,Ventas,Tarde,Sup. D,72.2,0.7,evening,fixed,true
+SYN-00501,2026-03-11,Ventas,Tarde,Sup. E,71.6,1.4,evening,flexible,true
+SYN-00502,2026-08-14,Retención,Noche,Sup. F,77.5,3.0,night,fixed,true
+SYN-00503,2024-07-02,Atención digital,Tarde,Sup. G,58.0,3.0,evening,flexible,true
+SYN-00504,2025-07-17,Atención digital,Día,Sup. H,49.8,3.5,day,fixed,true
+SYN-00505,2026-03-03,Retención,Día,Sup. A,68.9,0.5,day,flexible,true
+SYN-00506,2025-09-04,Soporte técnico,Día,Sup. B,70.4,0.4,day,fixed,true
+SYN-00507,2026-03-06,Ventas,Día,Sup. C,70.2,0.0,day,flexible,true
+SYN-00508,2026-03-17,Retención,Noche,Sup. D,88.1,2.2,night,fixed,true
+SYN-00509,2024-01-23,Retención,Día,Sup. E,,2.7,day,fixed,true
+SYN-00510,2024-08-29,Soporte técnico,Día,Sup. F,80.2,4.0,day,flexible,true
+SYN-00511,2025-09-30,Retención,Tarde,Sup. G,79.6,2.0,evening,fixed,true
+SYN-00512,2026-09-30,Retención,Día,Sup. H,81.6,0.2,day,flexible,true
+SYN-00513,2026-10-06,Soporte técnico,Día,Sup. A,66.0,2.3,day,flexible,true
+SYN-00514,2024-06-18,Soporte técnico,Día,Sup. B,68.4,6.2,day,flexible,true
+SYN-00515,2026-09-19,Ventas,Noche,Sup. C,87.0,1.9,night,fixed,true
+SYN-00516,2025-09-10,Soporte técnico,Día,Sup. D,69.3,0.0,day,fixed,true
+SYN-00517,2026-09-19,Soporte técnico,Día,Sup. E,97.5,0.0,day,flexible,true
+SYN-00518,2026-01-11,Soporte técnico,Noche,Sup. F,66.8,3.1,night,flexible,true
+SYN-00519,2026-05-03,Atención digital,Tarde,Sup. G,88.8,0.0,evening,flexible,true
+SYN-00520,2026-09-25,Retención,Noche,Sup. H,89.9,3.6,night,flexible,true
+SYN-00521,2025-05-31,Ventas,Día,Sup. A,79.1,3.0,day,flexible,true
+SYN-00522,2025-08-18,Soporte técnico,Tarde,Sup. B,82.2,0.3,evening,fixed,true
+SYN-00523,2026-08-14,Soporte técnico,Día,Sup. C,84.0,4.3,day,flexible,true
+SYN-00524,2025-10-28,Ventas,Día,Sup. D,100.0,4.1,day,flexible,true
+SYN-00525,2026-01-15,Soporte técnico,Noche,Sup. E,79.2,3.5,night,fixed,true
+SYN-00526,2025-02-03,Soporte técnico,Tarde,Sup. F,80.9,0.0,evening,flexible,true
+SYN-00527,2025-09-03,Retención,Día,Sup. G,74.4,0.0,day,fixed,true
+SYN-00528,2024-06-04,Soporte técnico,Tarde,Sup. H,71.9,,evening,fixed,true
+SYN-00529,2026-07-12,Ventas,Noche,Sup. A,67.7,2.2,night,fixed,true
+SYN-00530,2026-03-29,Retención,Día,Sup. B,77.9,0.0,day,fixed,true
+SYN-00531,2024-03-11,Retención,Día,Sup. C,61.4,0.0,day,fixed,true
+SYN-00532,2024-08-03,Soporte técnico,Noche,Sup. D,71.1,0.8,night,fixed,true
+SYN-00533,2026-07-15,Ventas,Tarde,Sup. E,91.4,2.0,evening,fixed,true
+SYN-00534,2025-08-23,Ventas,Noche,Sup. F,80.7,1.4,night,fixed,true
+SYN-00535,2025-10-26,Atención digital,Tarde,Sup. G,64.3,1.3,evening,flexible,true
+SYN-00536,2025-11-08,Retención,Noche,Sup. H,99.0,1.7,night,fixed,true
+SYN-00537,2024-12-30,Retención,Tarde,Sup. A,78.9,2.3,evening,fixed,true
+SYN-00538,2024-05-15,Ventas,Tarde,Sup. B,65.7,0.0,evening,fixed,true
+SYN-00539,2026-08-15,Atención digital,Día,Sup. C,71.7,1.2,day,flexible,true
+SYN-00540,2025-11-06,Ventas,Tarde,Sup. D,89.9,2.7,evening,fixed,true
+SYN-00541,2026-05-21,Soporte técnico,Tarde,Sup. E,79.8,0.0,evening,flexible,true
+SYN-00542,2026-01-16,Retención,Tarde,Sup. F,83.7,2.1,evening,fixed,true
+SYN-00543,2024-03-10,Soporte técnico,Noche,Sup. G,94.5,0.0,night,flexible,true
+SYN-00544,2024-03-29,Retención,Día,Sup. H,82.4,0.0,day,fixed,true
+SYN-00545,2024-05-23,Atención digital,Tarde,Sup. A,97.7,0.0,evening,flexible,true
+SYN-00546,2024-05-08,Ventas,Día,Sup. B,63.7,1.9,day,fixed,true
+SYN-00547,2024-09-18,Atención digital,Día,Sup. C,72.1,1.1,day,flexible,true
+SYN-00548,2024-08-27,Atención digital,Día,Sup. D,99.8,0.7,day,flexible,true
+SYN-00549,2026-07-27,Ventas,Día,Sup. E,89.9,2.6,day,fixed,true
+SYN-00550,2024-03-01,Atención digital,Tarde,Sup. F,60.8,4.7,evening,fixed,true
+SYN-00551,2026-04-26,Atención digital,Día,Sup. G,78.0,0.0,day,flexible,true
+SYN-00552,2025-01-08,Soporte técnico,Noche,Sup. H,100.0,0.8,night,fixed,true
+SYN-00553,2025-11-27,Ventas,Día,Sup. A,90.2,0.0,day,flexible,true
+SYN-00554,2025-09-02,Atención digital,Noche,Sup. B,70.3,3.7,night,flexible,true
+SYN-00555,2025-12-22,Ventas,Día,Sup. C,47.5,1.6,day,flexible,true
+SYN-00556,2026-01-24,Retención,Tarde,Sup. D,74.8,2.6,evening,flexible,true
+SYN-00557,2024-03-19,Retención,Día,Sup. E,64.3,1.7,day,fixed,true
+SYN-00558,2025-11-20,Ventas,Tarde,Sup. F,70.6,3.4,evening,flexible,true
+SYN-00559,2024-01-20,Ventas,Día,Sup. G,62.7,1.5,day,flexible,true
+SYN-00560,2025-10-28,Atención digital,Día,Sup. H,53.7,2.6,day,flexible,true
+SYN-00561,2024-05-13,Ventas,Día,Sup. A,78.0,2.9,day,flexible,true
+SYN-00562,2024-04-01,Atención digital,Noche,Sup. B,46.4,1.0,night,flexible,true
+SYN-00563,2026-08-08,Soporte técnico,Noche,Sup. C,65.8,1.1,night,fixed,true
+SYN-00564,2026-02-27,Soporte técnico,Día,Sup. D,78.0,5.4,day,flexible,true
+SYN-00565,2026-09-27,Soporte técnico,Día,Sup. E,55.8,2.2,day,fixed,true
+SYN-00566,2025-12-15,Ventas,Día,Sup. F,87.1,0.0,day,fixed,true
+SYN-00567,2026-04-18,Ventas,Día,Sup. G,78.8,0.0,day,fixed,true
+SYN-00568,2025-10-29,Soporte técnico,Tarde,Sup. H,89.3,2.4,evening,flexible,true
+SYN-00569,2026-06-18,Soporte técnico,Día,Sup. A,94.0,0.5,day,fixed,true
+SYN-00570,2024-09-25,Atención digital,Día,Sup. B,75.1,2.0,day,fixed,true
+SYN-00571,2026-03-09,Atención digital,Noche,Sup. C,82.7,0.3,night,flexible,true
+SYN-00572,2024-05-10,Soporte técnico,Tarde,Sup. D,57.0,4.4,evening,flexible,true
+SYN-00573,2024-01-07,Atención digital,Noche,Sup. E,64.3,1.8,night,fixed,true
+SYN-00574,2024-08-08,Atención digital,Tarde,Sup. F,71.1,2.8,evening,flexible,true
+SYN-00575,2026-03-18,Retención,Tarde,Sup. G,56.6,2.7,evening,flexible,true
+SYN-00576,2024-05-20,Retención,Día,Sup. H,72.7,0.0,day,flexible,true
+SYN-00577,2026-06-29,Retención,Tarde,Sup. A,86.4,3.2,evening,flexible,true
+SYN-00578,2026-10-14,Soporte técnico,Noche,Sup. B,71.8,2.0,night,fixed,true
+SYN-00579,2026-05-30,Ventas,Noche,Sup. C,81.5,0.0,night,fixed,true
+SYN-00580,2026-01-06,Soporte técnico,Tarde,Sup. D,85.4,2.3,evening,flexible,true
+SYN-00581,2026-09-06,Retención,Día,Sup. E,60.3,3.0,day,flexible,true
+SYN-00582,2025-10-24,Atención digital,Noche,Sup. F,90.0,1.6,night,flexible,true
+SYN-00583,2025-07-22,Retención,Noche,Sup. G,86.5,4.2,night,fixed,true
+SYN-00584,2025-05-27,Atención digital,Noche,Sup. H,69.0,0.7,night,flexible,true
+SYN-00585,2025-02-18,Soporte técnico,Tarde,Sup. A,85.3,0.0,evening,flexible,true
+SYN-00586,2025-07-29,Atención digital,Tarde,Sup. B,67.1,6.6,evening,flexible,true
+SYN-00587,2025-04-14,Ventas,Tarde,Sup. C,98.6,2.6,evening,fixed,true
+SYN-00588,2026-06-03,Retención,Noche,Sup. D,62.1,0.0,night,flexible,true
+SYN-00589,2026-07-06,Soporte técnico,Tarde,Sup. E,62.2,1.6,evening,flexible,true
+SYN-00590,2026-07-26,Retención,Día,Sup. F,72.8,1.3,day,fixed,true
+SYN-00591,2025-02-03,Soporte técnico,Noche,Sup. G,63.5,1.0,night,fixed,true
+SYN-00592,2025-06-21,Atención digital,Noche,Sup. H,85.7,2.1,night,flexible,true
+SYN-00593,2024-10-13,Ventas,Noche,Sup. A,80.2,3.0,night,fixed,true
+SYN-00594,2025-06-13,Retención,Tarde,Sup. B,78.2,2.3,evening,flexible,true
+SYN-00595,2024-02-14,Atención digital,Noche,Sup. C,80.0,4.7,night,flexible,true
+SYN-00596,2024-01-07,Atención digital,Día,Sup. D,54.4,0.8,day,flexible,true
+SYN-00597,2026-08-02,Atención digital,Tarde,Sup. E,98.4,5.3,evening,flexible,true
+SYN-00598,2026-08-31,Retención,Día,Sup. F,72.5,1.5,day,flexible,true
+SYN-00599,2024-09-14,Atención digital,Noche,Sup. G,65.1,0.4,night,flexible,true
+SYN-00600,2026-03-26,Ventas,Noche,Sup. H,59.0,2.9,night,flexible,true
+SYN-00601,2026-01-24,Ventas,Día,Sup. A,,2.4,day,flexible,true
+SYN-00602,2026-02-11,Retención,Tarde,Sup. B,74.4,3.9,evening,fixed,true
+SYN-00603,2026-03-22,Ventas,Noche,Sup. C,80.4,3.7,night,fixed,true
+SYN-00604,2026-06-12,Soporte técnico,Tarde,Sup. D,87.4,1.0,evening,flexible,true
+SYN-00605,2025-01-03,Ventas,Día,Sup. E,55.0,2.8,day,flexible,true
+SYN-00606,2024-10-22,Soporte técnico,Tarde,Sup. F,85.9,0.0,evening,flexible,true
+SYN-00607,2025-11-03,Ventas,Tarde,Sup. G,66.1,2.1,evening,flexible,true
+SYN-00608,2025-09-04,Retención,Tarde,Sup. H,84.9,4.8,evening,flexible,true
+SYN-00609,2025-04-03,Retención,Día,Sup. A,86.4,3.4,day,fixed,true
+SYN-00610,2026-01-31,Ventas,Día,Sup. B,80.0,0.0,day,fixed,true
+SYN-00611,2024-04-14,Retención,Noche,Sup. C,76.2,1.7,night,fixed,true
+SYN-00612,2026-04-01,Retención,Día,Sup. D,80.5,0.0,day,flexible,true
+SYN-00613,2024-03-16,Retención,Día,Sup. E,100.0,0.0,day,fixed,true
+SYN-00614,2025-09-05,Retención,Día,Sup. F,71.9,0.2,day,fixed,true
+SYN-00615,2026-05-31,Ventas,Día,Sup. G,52.0,2.8,day,flexible,true
+SYN-00616,2025-09-08,Retención,Día,Sup. H,,0.8,day,flexible,true
+SYN-00617,2024-05-12,Soporte técnico,Tarde,Sup. A,82.4,,evening,flexible,true
+SYN-00618,2025-02-14,Atención digital,Día,Sup. B,77.8,2.5,day,flexible,true
+SYN-00619,2024-10-21,Ventas,Tarde,Sup. C,88.7,2.3,evening,flexible,true
+SYN-00620,2026-06-21,Ventas,Noche,Sup. D,75.4,3.6,night,flexible,true
+SYN-00621,2025-04-25,Soporte técnico,Día,Sup. E,99.8,4.0,day,fixed,true
+SYN-00622,2026-01-29,Retención,Tarde,Sup. F,94.1,0.7,evening,fixed,true
+SYN-00623,2024-12-08,Ventas,Día,Sup. G,77.0,1.6,day,flexible,true
+SYN-00624,2025-07-18,Retención,Tarde,Sup. H,80.7,1.1,evening,fixed,true
+SYN-00625,2025-12-26,Ventas,Noche,Sup. A,75.6,0.8,night,fixed,true
+SYN-00626,2025-03-17,Ventas,Noche,Sup. B,82.9,0.0,night,flexible,true
+SYN-00627,2025-11-13,Ventas,Día,Sup. C,69.1,1.5,day,fixed,true
+SYN-00628,2024-09-19,Retención,Día,Sup. D,72.2,1.9,day,fixed,true
+SYN-00629,2025-01-24,Retención,Día,Sup. E,54.0,2.6,day,flexible,true
+SYN-00630,2024-04-18,Atención digital,Tarde,Sup. F,91.7,1.7,evening,flexible,true
+SYN-00631,2026-05-31,Ventas,Día,Sup. G,90.3,1.9,day,flexible,true
+SYN-00632,2026-08-24,Soporte técnico,Noche,Sup. H,61.6,,night,fixed,true
+SYN-00633,2025-10-26,Soporte técnico,Día,Sup. A,82.1,1.9,day,flexible,true
+SYN-00634,2026-01-09,Soporte técnico,Noche,Sup. B,72.2,0.8,night,flexible,true
+SYN-00635,2024-09-17,Atención digital,Día,Sup. C,81.5,0.6,day,flexible,true
+SYN-00636,2024-04-28,Soporte técnico,Día,Sup. D,76.8,,day,flexible,true
+SYN-00637,2026-02-24,Atención digital,Noche,Sup. E,60.6,,night,fixed,true
+SYN-00638,2025-01-29,Soporte técnico,Tarde,Sup. F,65.6,0.5,evening,flexible,true
+SYN-00639,2026-04-15,Retención,Noche,Sup. G,72.1,1.9,night,flexible,true
+SYN-00640,2026-06-17,Atención digital,Día,Sup. H,56.0,4.8,day,flexible,true
+SYN-00641,2024-09-27,Retención,Día,Sup. A,,2.7,day,fixed,true
+SYN-00642,2024-01-09,Soporte técnico,Noche,Sup. B,86.9,1.1,night,flexible,true
+SYN-00643,2024-06-10,Atención digital,Noche,Sup. C,68.4,2.6,night,flexible,true
+SYN-00644,2026-03-06,Soporte técnico,Día,Sup. D,99.2,5.4,day,fixed,true
+SYN-00645,2024-01-23,Soporte técnico,Tarde,Sup. E,60.9,3.1,evening,flexible,true
+SYN-00646,2025-04-11,Ventas,Tarde,Sup. F,80.9,0.6,evening,fixed,true
+SYN-00647,2026-05-29,Soporte técnico,Tarde,Sup. G,79.8,2.4,evening,flexible,true
+SYN-00648,2024-07-23,Atención digital,Noche,Sup. H,78.6,1.0,night,flexible,true
+SYN-00649,2026-10-08,Atención digital,Tarde,Sup. A,77.9,0.1,evening,fixed,true
+SYN-00650,2026-03-30,Atención digital,Día,Sup. B,53.6,1.9,day,flexible,true
+SYN-00651,2026-09-30,Ventas,Día,Sup. C,99.8,,day,fixed,true
+SYN-00652,2025-01-24,Retención,Noche,Sup. D,83.1,0.0,night,fixed,true
+SYN-00653,2025-03-21,Atención digital,Día,Sup. E,,2.1,day,flexible,true
+SYN-00654,2024-06-11,Atención digital,Tarde,Sup. F,73.4,0.0,evening,fixed,true
+SYN-00655,2025-11-24,Retención,Noche,Sup. G,72.0,0.0,night,flexible,true
+SYN-00656,2024-09-25,Atención digital,Día,Sup. H,75.1,0.3,day,fixed,true
+SYN-00657,2026-03-16,Ventas,Tarde,Sup. A,61.6,2.6,evening,flexible,true
+SYN-00658,2025-11-04,Ventas,Noche,Sup. B,78.4,2.8,night,flexible,true
+SYN-00659,2025-05-24,Soporte técnico,Día,Sup. C,70.6,3.6,day,flexible,true
+SYN-00660,2026-03-06,Ventas,Día,Sup. D,67.3,1.9,day,flexible,true
+SYN-00661,2024-06-30,Retención,Tarde,Sup. E,95.3,0.0,evening,fixed,true
+SYN-00662,2024-08-08,Retención,Día,Sup. F,73.6,6.3,day,flexible,true
+SYN-00663,2024-04-20,Soporte técnico,Noche,Sup. G,,0.8,night,flexible,true
+SYN-00664,2024-06-02,Ventas,Tarde,Sup. H,71.3,1.8,evening,flexible,true
+SYN-00665,2025-04-12,Retención,Tarde,Sup. A,67.0,,evening,flexible,true
+SYN-00666,2025-03-06,Retención,Noche,Sup. B,69.2,2.3,night,flexible,true
+SYN-00667,2026-10-09,Soporte técnico,Noche,Sup. C,75.0,1.8,night,flexible,true
+SYN-00668,2026-09-27,Retención,Día,Sup. D,71.9,2.4,day,flexible,true
+SYN-00669,2024-05-18,Ventas,Día,Sup. E,82.2,0.0,day,fixed,true
+SYN-00670,2024-06-22,Atención digital,Tarde,Sup. F,,2.0,evening,fixed,true
+SYN-00671,2026-07-08,Retención,Tarde,Sup. G,69.8,0.9,evening,fixed,true
+SYN-00672,2026-03-21,Soporte técnico,Tarde,Sup. H,72.9,0.4,evening,fixed,true
+SYN-00673,2025-06-05,Retención,Día,Sup. A,78.6,0.0,day,flexible,true
+SYN-00674,2024-07-06,Ventas,Día,Sup. B,65.3,0.0,day,fixed,true
+SYN-00675,2024-11-30,Ventas,Día,Sup. C,86.9,0.0,day,flexible,true
+SYN-00676,2025-06-26,Soporte técnico,Tarde,Sup. D,91.5,2.4,evening,fixed,true
+SYN-00677,2024-11-07,Soporte técnico,Día,Sup. E,54.1,2.8,day,fixed,true
+SYN-00678,2026-05-28,Soporte técnico,Tarde,Sup. F,86.8,0.3,evening,flexible,true
+SYN-00679,2025-07-02,Atención digital,Día,Sup. G,78.7,0.0,day,fixed,true
+SYN-00680,2024-08-07,Retención,Tarde,Sup. H,76.4,1.8,evening,flexible,true
+SYN-00681,2026-09-18,Ventas,Día,Sup. A,79.9,2.6,day,flexible,true
+SYN-00682,2025-11-04,Atención digital,Tarde,Sup. B,65.2,0.0,evening,flexible,true
+SYN-00683,2025-07-29,Atención digital,Día,Sup. C,66.3,2.4,day,fixed,true
+SYN-00684,2025-05-13,Atención digital,Noche,Sup. D,76.1,2.9,night,flexible,true
+SYN-00685,2026-09-04,Ventas,Día,Sup. E,72.8,1.0,day,flexible,true
+SYN-00686,2024-01-22,Retención,Día,Sup. F,63.9,0.4,day,fixed,true
+SYN-00687,2026-07-01,Ventas,Noche,Sup. G,90.4,0.0,night,flexible,true
+SYN-00688,2025-04-29,Retención,Día,Sup. H,62.2,1.2,day,fixed,true
+SYN-00689,2024-03-29,Atención digital,Día,Sup. A,72.9,0.1,day,fixed,true
+SYN-00690,2026-08-17,Retención,Día,Sup. B,53.3,3.2,day,fixed,true
+SYN-00691,2025-11-05,Retención,Día,Sup. C,76.2,1.7,day,flexible,true
+SYN-00692,2025-07-31,Soporte técnico,Tarde,Sup. D,82.4,1.2,evening,fixed,true
+SYN-00693,2026-05-26,Soporte técnico,Noche,Sup. E,47.0,4.1,night,flexible,true
+SYN-00694,2024-03-15,Atención digital,Tarde,Sup. F,50.9,1.8,evening,flexible,true
+SYN-00695,2026-09-13,Retención,Tarde,Sup. G,69.2,2.9,evening,fixed,true
+SYN-00696,2024-09-02,Retención,Día,Sup. H,,1.7,day,fixed,true
+SYN-00697,2026-06-18,Retención,Tarde,Sup. A,66.5,1.8,evening,fixed,true
+SYN-00698,2024-10-01,Soporte técnico,Día,Sup. B,70.8,0.0,day,flexible,true
+SYN-00699,2024-08-30,Ventas,Tarde,Sup. C,72.4,1.6,evening,flexible,true
+SYN-00700,2025-10-10,Retención,Día,Sup. D,62.9,4.0,day,flexible,true
+SYN-00701,2025-11-16,Atención digital,Tarde,Sup. E,73.2,2.7,evening,flexible,true
+SYN-00702,2026-06-19,Soporte técnico,Día,Sup. F,70.4,1.1,day,fixed,true
+SYN-00703,2024-12-29,Ventas,Tarde,Sup. G,63.4,,evening,flexible,true
+SYN-00704,2025-07-23,Atención digital,Día,Sup. H,99.4,1.7,day,flexible,true
+SYN-00705,2026-02-28,Ventas,Tarde,Sup. A,63.9,3.7,evening,fixed,true
+SYN-00706,2024-05-08,Atención digital,Noche,Sup. B,,1.3,night,fixed,true
+SYN-00707,2026-05-23,Atención digital,Tarde,Sup. C,,1.4,evening,fixed,true
+SYN-00708,2024-10-31,Retención,Tarde,Sup. D,67.9,0.0,evening,flexible,true
+SYN-00709,2026-10-09,Atención digital,Día,Sup. E,81.6,1.8,day,flexible,true
+SYN-00710,2025-05-01,Retención,Tarde,Sup. F,67.5,2.1,evening,flexible,true
+SYN-00711,2024-05-31,Soporte técnico,Día,Sup. G,91.2,3.0,day,fixed,true
+SYN-00712,2025-01-17,Soporte técnico,Noche,Sup. H,69.4,2.1,night,flexible,true
+SYN-00713,2026-06-28,Ventas,Noche,Sup. A,57.8,3.5,night,fixed,true
+SYN-00714,2026-06-23,Atención digital,Día,Sup. B,78.8,4.5,day,fixed,true
+SYN-00715,2026-08-29,Soporte técnico,Día,Sup. C,63.6,0.0,day,flexible,true
+SYN-00716,2025-09-17,Retención,Día,Sup. D,68.6,3.4,day,flexible,true
+SYN-00717,2024-02-13,Soporte técnico,Tarde,Sup. E,73.1,0.7,evening,fixed,true
+SYN-00718,2024-03-11,Soporte técnico,Tarde,Sup. F,,0.6,evening,fixed,true
+SYN-00719,2025-10-19,Ventas,Día,Sup. G,79.4,0.0,day,fixed,true
+SYN-00720,2025-09-26,Ventas,Noche,Sup. H,80.5,2.5,night,flexible,true

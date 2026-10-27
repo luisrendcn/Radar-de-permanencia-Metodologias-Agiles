@@ -1,0 +1,231 @@
+﻿employee_id,reason,synthetic_data
+SYN-00002,Horario incompatible,true
+SYN-00007,Horario incompatible,true
+SYN-00008,Expectativas del cargo,true
+SYN-00009,Motivos personales,true
+SYN-00013,Expectativas del cargo,true
+SYN-00014,Compensación,true
+SYN-00016,Transporte y desplazamiento,true
+SYN-00021,Oferta laboral externa,true
+SYN-00022,Oferta laboral externa,true
+SYN-00023,Transporte y desplazamiento,true
+SYN-00025,Motivos personales,true
+SYN-00026,Expectativas del cargo,true
+SYN-00028,Oferta laboral externa,true
+SYN-00030,Expectativas del cargo,true
+SYN-00031,Oferta laboral externa,true
+SYN-00035,Horario incompatible,true
+SYN-00042,Horario incompatible,true
+SYN-00044,Motivos personales,true
+SYN-00047,Oferta laboral externa,true
+SYN-00049,Oferta laboral externa,true
+SYN-00054,Transporte y desplazamiento,true
+SYN-00057,Compensación,true
+SYN-00061,Horario incompatible,true
+SYN-00062,Horario incompatible,true
+SYN-00064,Motivos personales,true
+SYN-00069,Oferta laboral externa,true
+SYN-00070,Horario incompatible,true
+SYN-00074,Horario incompatible,true
+SYN-00079,Compensación,true
+SYN-00083,Motivos personales,true
+SYN-00085,Horario incompatible,true
+SYN-00088,Transporte y desplazamiento,true
+SYN-00089,Transporte y desplazamiento,true
+SYN-00091,Expectativas del cargo,true
+SYN-00092,Horario incompatible,true
+SYN-00094,Motivos personales,true
+SYN-00095,Motivos personales,true
+SYN-00096,Horario incompatible,true
+SYN-00099,Transporte y desplazamiento,true
+SYN-00102,Oferta laboral externa,true
+SYN-00109,Horario incompatible,true
+SYN-00112,Horario incompatible,true
+SYN-00113,Transporte y desplazamiento,true
+SYN-00116,Transporte y desplazamiento,true
+SYN-00117,Motivos personales,true
+SYN-00118,Expectativas del cargo,true
+SYN-00120,Transporte y desplazamiento,true
+SYN-00122,Horario incompatible,true
+SYN-00123,Oferta laboral externa,true
+SYN-00133,Compensación,true
+SYN-00141,Motivos personales,true
+SYN-00142,Expectativas del cargo,true
+SYN-00146,Compensación,true
+SYN-00148,Motivos personales,true
+SYN-00156,Transporte y desplazamiento,true
+SYN-00164,Oferta laboral externa,true
+SYN-00166,Transporte y desplazamiento,true
+SYN-00177,Expectativas del cargo,true
+SYN-00182,Transporte y desplazamiento,true
+SYN-00183,Transporte y desplazamiento,true
+SYN-00185,Transporte y desplazamiento,true
+SYN-00188,Oferta laboral externa,true
+SYN-00189,Oferta laboral externa,true
+SYN-00191,Expectativas del cargo,true
+SYN-00192,Expectativas del cargo,true
+SYN-00195,Expectativas del cargo,true
+SYN-00197,Motivos personales,true
+SYN-00200,Oferta laboral externa,true
+SYN-00209,Horario incompatible,true
+SYN-00211,Horario incompatible,true
+SYN-00214,Transporte y desplazamiento,true
+SYN-00215,Expectativas del cargo,true
+SYN-00216,Horario incompatible,true
+SYN-00220,Expectativas del cargo,true
+SYN-00221,Oferta laboral externa,true
+SYN-00223,Expectativas del cargo,true
+SYN-00225,Expectativas del cargo,true
+SYN-00226,Compensación,true
+SYN-00229,Oferta laboral externa,true
+SYN-00235,Motivos personales,true
+SYN-00239,Horario incompatible,true
+SYN-00240,Oferta laboral externa,true
+SYN-00241,Expectativas del cargo,true
+SYN-00242,Transporte y desplazamiento,true
+SYN-00251,Compensación,true
+SYN-00252,Oferta laboral externa,true
+SYN-00255,Oferta laboral externa,true
+SYN-00260,Expectativas del cargo,true
+SYN-00268,Horario incompatible,true
+SYN-00270,Compensación,true
+SYN-00271,Motivos personales,true
+SYN-00281,Horario incompatible,true
+SYN-00282,Expectativas del cargo,true
+SYN-00287,Transporte y desplazamiento,true
+SYN-00292,Expectativas del cargo,true
+SYN-00294,Transporte y desplazamiento,true
+SYN-00300,Oferta laboral externa,true
+SYN-00304,Compensación,true
+SYN-00311,Expectativas del cargo,true
+SYN-00312,Horario incompatible,true
+SYN-00313,Expectativas del cargo,true
+SYN-00321,Horario incompatible,true
+SYN-00322,Horario incompatible,true
+SYN-00324,Transporte y desplazamiento,true
+SYN-00325,Horario incompatible,true
+SYN-00326,Motivos personales,true
+SYN-00329,Motivos personales,true
+SYN-00330,Oferta laboral externa,true
+SYN-00331,Transporte y desplazamiento,true
+SYN-00335,Expectativas del cargo,true
+SYN-00339,Transporte y desplazamiento,true
+SYN-00340,Horario incompatible,true
+SYN-00341,Transporte y desplazamiento,true
+SYN-00344,Oferta laboral externa,true
+SYN-00347,Expectativas del cargo,true
+SYN-00349,Transporte y desplazamiento,true
+SYN-00353,Transporte y desplazamiento,true
+SYN-00367,Compensación,true
+SYN-00375,Horario incompatible,true
+SYN-00376,Motivos personales,true
+SYN-00377,Expectativas del cargo,true
+SYN-00382,Horario incompatible,true
+SYN-00384,Expectativas del cargo,true
+SYN-00385,Expectativas del cargo,true
+SYN-00386,Motivos personales,true
+SYN-00389,Motivos personales,true
+SYN-00390,Compensación,true
+SYN-00391,Expectativas del cargo,true
+SYN-00393,Oferta laboral externa,true
+SYN-00395,Horario incompatible,true
+SYN-00396,Horario incompatible,true
+SYN-00397,Expectativas del cargo,true
+SYN-00400,Oferta laboral externa,true
+SYN-00402,Oferta laboral externa,true
+SYN-00407,Motivos personales,true
+SYN-00414,Expectativas del cargo,true
+SYN-00415,Expectativas del cargo,true
+SYN-00422,Oferta laboral externa,true
+SYN-00434,Expectativas del cargo,true
+SYN-00435,Horario incompatible,true
+SYN-00437,Oferta laboral externa,true
+SYN-00439,Motivos personales,true
+SYN-00445,Oferta laboral externa,true
+SYN-00448,Transporte y desplazamiento,true
+SYN-00449,Oferta laboral externa,true
+SYN-00461,Expectativas del cargo,true
+SYN-00462,Horario incompatible,true
+SYN-00463,Expectativas del cargo,true
+SYN-00464,Motivos personales,true
+SYN-00467,Horario incompatible,true
+SYN-00471,Horario incompatible,true
+SYN-00476,Oferta laboral externa,true
+SYN-00479,Expectativas del cargo,true
+SYN-00485,Motivos personales,true
+SYN-00489,Expectativas del cargo,true
+SYN-00491,Horario incompatible,true
+SYN-00492,Horario incompatible,true
+SYN-00494,Motivos personales,true
+SYN-00498,Oferta laboral externa,true
+SYN-00505,Motivos personales,true
+SYN-00507,Transporte y desplazamiento,true
+SYN-00508,Expectativas del cargo,true
+SYN-00513,Compensación,true
+SYN-00515,Oferta laboral externa,true
+SYN-00517,Expectativas del cargo,true
+SYN-00519,Compensación,true
+SYN-00520,Horario incompatible,true
+SYN-00522,Horario incompatible,true
+SYN-00525,Transporte y desplazamiento,true
+SYN-00528,Compensación,true
+SYN-00530,Horario incompatible,true
+SYN-00531,Transporte y desplazamiento,true
+SYN-00532,Oferta laboral externa,true
+SYN-00535,Compensación,true
+SYN-00538,Expectativas del cargo,true
+SYN-00543,Oferta laboral externa,true
+SYN-00544,Expectativas del cargo,true
+SYN-00546,Horario incompatible,true
+SYN-00549,Expectativas del cargo,true
+SYN-00551,Transporte y desplazamiento,true
+SYN-00555,Oferta laboral externa,true
+SYN-00563,Oferta laboral externa,true
+SYN-00566,Horario incompatible,true
+SYN-00570,Oferta laboral externa,true
+SYN-00571,Horario incompatible,true
+SYN-00572,Compensación,true
+SYN-00573,Expectativas del cargo,true
+SYN-00576,Horario incompatible,true
+SYN-00578,Expectativas del cargo,true
+SYN-00588,Expectativas del cargo,true
+SYN-00591,Expectativas del cargo,true
+SYN-00592,Expectativas del cargo,true
+SYN-00595,Horario incompatible,true
+SYN-00599,Expectativas del cargo,true
+SYN-00607,Motivos personales,true
+SYN-00609,Motivos personales,true
+SYN-00610,Horario incompatible,true
+SYN-00613,Oferta laboral externa,true
+SYN-00616,Horario incompatible,true
+SYN-00618,Transporte y desplazamiento,true
+SYN-00620,Expectativas del cargo,true
+SYN-00625,Transporte y desplazamiento,true
+SYN-00628,Oferta laboral externa,true
+SYN-00635,Horario incompatible,true
+SYN-00637,Oferta laboral externa,true
+SYN-00638,Expectativas del cargo,true
+SYN-00645,Motivos personales,true
+SYN-00649,Compensación,true
+SYN-00653,Motivos personales,true
+SYN-00654,Oferta laboral externa,true
+SYN-00660,Motivos personales,true
+SYN-00661,Expectativas del cargo,true
+SYN-00663,Motivos personales,true
+SYN-00665,Transporte y desplazamiento,true
+SYN-00669,Horario incompatible,true
+SYN-00677,Horario incompatible,true
+SYN-00679,Oferta laboral externa,true
+SYN-00684,Horario incompatible,true
+SYN-00686,Expectativas del cargo,true
+SYN-00687,Horario incompatible,true
+SYN-00690,Transporte y desplazamiento,true
+SYN-00695,Oferta laboral externa,true
+SYN-00697,Transporte y desplazamiento,true
+SYN-00698,Expectativas del cargo,true
+SYN-00701,Motivos personales,true
+SYN-00702,Oferta laboral externa,true
+SYN-00706,Expectativas del cargo,true
+SYN-00712,Oferta laboral externa,true
+SYN-00713,Compensación,true
+SYN-00719,Expectativas del cargo,true

@@ -1,0 +1,36 @@
+kind = "web"
+previewPath = "/"
+title = "Radar de Permanencia — People Analytics"
+description = "Analítica de rotación temprana para equipos de RR. HH. BPO: cohortes, diagnóstico, calidad de datos y evaluación de candidatos con apoyo de un modelo explicable, sin automatizar decisiones de contratación."
+version = "1.0.0"
+id = "artifacts/people-analytics"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20390
+
+[services.development]
+run = "pnpm --filter @workspace/people-analytics run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/people-analytics", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/people-analytics/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20390"
+BASE_PATH = "/"
+
+[[services]]
+name = "api"
+paths = ["/people-api"]
+localPort = 8000
+
+[services.development]
+run = "uv run --with-requirements ../../backend/requirements.txt python -m uvicorn app.main:app --app-dir ../../backend --host 0.0.0.0 --port 8000"
