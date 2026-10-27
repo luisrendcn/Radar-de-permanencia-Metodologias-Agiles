@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+from contextlib import asynccontextmanager
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -36,12 +37,28 @@ from .storage import (
     validate_sources,
 )
 
+
+def public_demo_enabled() -> bool:
+    return os.getenv("RADAR_PUBLIC_DEMO", "false").strip().lower() == "true"
+
+
+@asynccontextmanager
+async def lifespan(_: FastAPI):
+    # A public demo starts with fictional data so a cold service can answer
+    # status/model requests immediately without asking visitors to seed it.
+    if public_demo_enabled() and not dataset_status()["processed"]:
+        generate_demo_sources()
+        run_etl()
+        train_model()
+    yield
+
 app = FastAPI(
     title="Radar de Permanencia — People Analytics",
     version="1.0.0",
     description="API local para análisis cohortal, calidad de datos y estimaciones experimentales.",
     docs_url="/people-api/docs",
     openapi_url="/people-api/openapi.json",
+    lifespan=lifespan,
 )
 
 raw_origins = os.getenv(
@@ -155,6 +172,8 @@ def generate_demo_data() -> dict[str, Any]:
 
 @app.post("/people-api/datasets/upload")
 def upload_dataset(payload: DatasetUploadInput) -> dict[str, Any]:
+    if public_demo_enabled():
+        raise HTTPException(403, "La demo pública solo acepta datos sintéticos; la carga de archivos está deshabilitada.")
     return upload_source(payload.source, payload.fileName, payload.contentBase64)
 
 
